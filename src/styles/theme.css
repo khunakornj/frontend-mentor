@@ -3,6 +3,53 @@
   /* example */
   /* --color-ds-gray950: #2a2a2a; */
   /* --spacing-ds100: 8px; */
+  /* --radius-ds0: 0rem; */
+
+  /* color */
+  --color-ds-neutral900: #12131a;
+  --color-ds-neutral800: #21222c;
+  --color-ds-neutral700: #2a2b37;
+  --color-ds-neutral600: #404254;
+
+  --color-ds-neutral200: #e4e4ef;
+  --color-ds-neutral100: #f2f2f7;
+  --color-ds-neutral0: #ffffff;
+
+  --color-ds-blue400: #d3a0fa;
+  --color-ds-blue500: #c27cf8;
+
+  --color-ds-yellow500: #ff9f00;
+
+  --color-ds-orange500: #fe8159;
+  --color-ds-orange800: #da3701;
+
+  /* spacing */
+  --spacing-ds0: 0px;
+  --spacing-ds025: 2px;
+  --spacing-ds050: 4px;
+  --spacing-ds075: 6px;
+  --spacing-ds100: 8px;
+  --spacing-ds150: 12px;
+  --spacing-ds200: 16px;
+  --spacing-ds250: 20px;
+  --spacing-ds300: 24px;
+  --spacing-ds400: 32px;
+  --spacing-ds500: 40px;
+  --spacing-ds600: 48px;
+  --spacing-ds800: 64px;
+  --spacing-ds1000: 80px;
+
+  /* radi */
+  --radius-ds00: 0px;
+  --radius-ds04: 4px;
+  --radius-ds06: 6px;
+  --radius-ds08: 8px;
+  --radius-ds10: 10px;
+  --radius-ds12: 12px;
+  --radius-ds16: 16px;
+  --radius-ds20: 20px;
+  --radius-ds24: 24px;
+  --radius-dsfull: 999px;
 }
 
 @media (prefers-color-scheme: dark) {
