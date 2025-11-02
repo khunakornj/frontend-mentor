@@ -1,0 +1,120 @@
+/* src/styles/theme.css */
+@theme {
+  --color-ds-gray-950: #2a2a2a;
+  --color-ds-gray-700: #4c545c;
+  --color-ds-gray-500: #9eabb2;
+  --color-ds-gray-50: #f5f7f7;
+
+  --color-ds-green-500: #26bba4;
+  --color-ds-green-300: #5dccbb;
+
+  --color-ds-blue-500: #6174ff;
+  --color-ds-blue-400: #8897ff;
+
+  --color-ds-gradient-1: linear-gradient(180deg, #4f4f4f 0%, #000000 100%);
+  --color-ds-gradient-2: linear-gradient(180deg, #6d6d6d 0%, #000000 100%);
+
+  /* spacing */
+  --spacing-ds0: 0px;
+  --spacing-ds100: 8px;
+  --spacing-ds200: 16px;
+  --spacing-ds300: 24px;
+  --spacing-ds400: 32px;
+  --spacing-ds500: 40px;
+  --spacing-ds600: 48px;
+  --spacing-ds700: 56px;
+  --spacing-ds800: 64px;
+  --spacing-ds900: 72px;
+  --spacing-ds1000: 80px;
+  --spacing-ds1100: 88px;
+  --spacing-ds1200: 96px;
+
+  /* schemantic */
+  /* --color-card-bg: var(--color-neutral-0);
+  --color-card-border: var(--color-neutral-200);
+  --color-text: var(--color-neutral-900);
+  --color-text-muted: var(--color-neutral-600);
+
+  --color-toggle: var(--color-neutral-300);
+  --color-toggle-hover: var(--color-neutral-300);
+  --color-toggle-focus: var(--color-neutral-300);
+  --color-toggle-disabled: var(--color-neutral-100);
+  --color-toggle-pressed: var(--color-red-700);
+  --color-toggle-pressed-hover: var(--color-red-500);
+  --color-toggle-pressed-disabled: var(--color-neutral-100);
+  --color-toggle-pressed-focus: var(--color-red-700);
+  --color-toggle-outline: var(--color-red-500);
+
+  --color-button: var(--color-neutral-0);
+  --color-button-text: var(--color-neutral-900);
+  --color-button-hover: var(--color-neutral-0);
+  --color-button-focus: var(--color-neutral-0);
+  --color-button-active: var(--color-red-700);
+  --color-button-active-text: var(--color-neutral-0);
+  --color-button-active-hover: var(--color-red-500);
+  --color-button-active-focus: var(--color-red-700);
+  --color-button-outline: var(--color-red-500);
+  --color-button-stroke: var(--color-neutral-200); */
+}
+
+@media (prefers-color-scheme: dark) {
+  @theme {
+    /* schemantic */
+    /* --color-card-foreground: var(--color-neutral-0); */
+    /* --color-card-border: var(--color-neutral-200); */
+    /* --color-text: var(--color-neutral-900); */
+    /* --color-text-muted: var(--color-neutral-600); */
+
+    /* --color-toggle: var(--color-neutral-300); */
+    /* --color-toggle-hover: var(--color-neutral-300); */
+    /* --color-toggle-focus: var(--color-neutral-300); */
+    /* --color-toggle-disabled: var(--color-neutral-100); */
+    /* --color-toggle-pressed: var(--color-red-700); */
+    /* --color-toggle-pressed-hover: var(--color-red-500); */
+    /* --color-toggle-pressed-disabled: var(--color-neutral-100); */
+    /* --color-toggle-pressed-focus: var(--color-red-700); */
+    /* --color-toggle-outline: var(--color-red-500); */
+
+    /* --color-button: var(--color-neutral-0); */
+    /* --color-button-text: var(--color-neutral-900); */
+    /* --color-button-hover: var(--color-neutral-0); */
+    /* --color-button-focus: var(--color-neutral-0); */
+    /* --color-button-active: var(--color-red-700); */
+    /* --color-button-active-text: var(--color-neutral-0); */
+    /* --color-button-active-hover: var(--color-red-500); */
+    /* --color-button-active-focus: var(--color-red-700); */
+    /* --color-button-outline: var(--color-red-500); */
+    /* --color-button-stroke: var(--color-neutral-200); */
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  @theme {
+    /* schemantic */
+    /* --color-card-foreground: var(--color-neutral-800); */
+    /* --color-card-border: var(--color-neutral-600); */
+    /* --color-text: var(--color-neutral-0); */
+    /* --color-text-muted: var(--color-neutral-300); */
+
+    /* --color-toggle: var(--color-neutral-300); */
+    /* --color-toggle-pressed: var(--color-red-700); */
+    /* --color-toggle-hover: var(--color-neutral-300); */
+    /* --color-toggle-hover-pressed: var(--color-red-500); */
+    /* --color-toggle-focus: var(--color-neutral-300); */
+    /* --color-toggle-focus-outline: var(--color-red-500); */
+    /* --color-toggle-focus-pressed: var(--color-red-700); */
+    /* --color-toggle-disabled: var(--color-neutral-100); */
+    /* --color-toggle-disabled-pressed: var(--color-neutral-100); */
+
+    /* --color-button: var(--color-neutral-700); */
+    /* --color-button-text: var(--color-neutral-0); */
+    /* --color-button-hover: var(--color-neutral-600); */
+    /* --color-button-focus: var(--color-neutral-700); */
+    /* --color-button-active: var(--color-red-400); */
+    /* --color-button-active-text: var(--color-neutral-900); */
+    /* --color-button-active-hover: var(--color-red-500); */
+    /* --color-button-active-focus: var(--color-red-400); */
+    /* --color-button-outline: var(--color-red-500); */
+    /* --color-button-stroke: var(--color-neutral-200); */
+  }
+}

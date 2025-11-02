@@ -1,0 +1,71 @@
+@utility text-preset-1 {
+  font-family: 'Bai Jamjuree', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 2.875rem;
+  line-height: 125%;
+  letter-spacing: -0.75px;
+}
+
+@utility text-preset-2 {
+  font-family: 'Bai Jamjuree', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 125%;
+  letter-spacing: -0.75px;
+}
+
+@utility text-preset-3 {
+  font-family: 'Bai Jamjuree', system-ui, sans-serif;
+  font-size: 2.25rem;
+  line-height: 125%;
+  letter-spacing: -0.6px;
+  font-weight: 600;
+}
+
+@utility text-preset-4 {
+  font-family: 'Bai Jamjuree', system-ui, sans-serif;
+  font-size: 2rem;
+  line-height: 125%;
+  letter-spacing: -0.6px;
+  font-weight: 600;
+}
+
+@utility text-preset-5 {
+  font-family: 'Bai Jamjuree', system-ui, sans-serif;
+  font-size: 1.75rem;
+  line-height: 125%;
+  letter-spacing: -0.5px;
+  font-weight: 600;
+}
+
+@utility text-preset-6 {
+  font-family: 'Bai Jamjuree', system-ui, sans-serif;
+  font-size: 1.5rem;
+  line-height: 125%;
+  letter-spacing: -0.4px;
+  font-weight: 600;
+}
+
+@utility text-preset-7-semibold {
+  font-family: 'Bai Jamjuree', system-ui, sans-serif;
+  font-size: 1.25rem;
+  line-height: 150%;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+@utility text-preset-7-regular {
+  font-family: 'Bai Jamjuree', system-ui, sans-serif;
+  font-size: 1.25rem;
+  line-height: 150%;
+  letter-spacing: 0.15px;
+  font-weight: 400;
+}
+
+@utility text-preset-8 {
+  font-family: 'Bai Jamjuree', system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 150%;
+  letter-spacing: 0.15px;
+  font-weight: 400;
+}

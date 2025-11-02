@@ -1,0 +1,4 @@
+{
+  "typescript.preferences.autoImportFileExcludePatterns": ["**/dayjs/**"],
+  "css.lint.unknownAtRules": "ignore"
+}
