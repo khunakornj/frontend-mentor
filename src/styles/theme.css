@@ -1,20 +1,41 @@
 /* src/styles/theme.css */
 @theme {
-  /* example */
-  /* --color-ds-gray950: #2a2a2a; */
-  /* --spacing-ds100: 8px; */
+  --color-ds-gray-950: #2a2a2a;
+  --color-ds-gray-700: #4c545c;
+  --color-ds-gray-500: #9eabb2;
+  --color-ds-gray-50: #f5f7f7;
+
+  --color-ds-green-500: #26bba4;
+  --color-ds-green-300: #5dccbb;
+
+  --color-ds-blue-500: #6174ff;
+  --color-ds-blue-400: #8897ff;
+
+  --color-ds-gradient-1: linear-gradient(180deg, #4f4f4f 0%, #000000 100%);
+  --color-ds-gradient-2: linear-gradient(180deg, #6d6d6d 0%, #000000 100%);
+
+  /* spacing */
+  --spacing-ds0: 0px;
+  --spacing-ds100: 8px;
+  --spacing-ds200: 16px;
+  --spacing-ds300: 24px;
+  --spacing-ds400: 32px;
+  --spacing-ds500: 40px;
+  --spacing-ds600: 48px;
+  --spacing-ds700: 56px;
+  --spacing-ds800: 64px;
+  --spacing-ds900: 72px;
+  --spacing-ds1000: 80px;
+  --spacing-ds1100: 88px;
+  --spacing-ds1200: 96px;
 }
 
 @media (prefers-color-scheme: dark) {
   @theme {
-    /* schematic theming */
-    /* --color-card-border: var(--color-ds-gray950); */
   }
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   @theme {
-    /* schematic theming */
-    /* --color-card-border: var(--color-ds-gray950); */
   }
 }
