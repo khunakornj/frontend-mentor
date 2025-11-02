@@ -8,6 +8,7 @@ import { useState } from 'react';
 
 function RootPage() {
   const [char, setChar] = useState('');
+  const [isExcludeSpace, setIsExcludeSpace] = useState(false);
 
   return (
     <div
@@ -21,11 +22,21 @@ function RootPage() {
         <br /> in real-time.
       </Title>
 
-      <InputSection onType={(x) => setChar(x)} className="mb-ds600" />
+      <InputSection
+        char={char}
+        isExcludeSpace={isExcludeSpace}
+        onExludeSpaceChecked={(x) => setIsExcludeSpace(x)}
+        onType={(x) => setChar(x)}
+        className="mb-ds600"
+      />
 
-      <InputSummary char={char} className="mb-ds300" />
+      <InputSummary
+        isExcludeSpace={isExcludeSpace}
+        char={char}
+        className="mb-ds300"
+      />
 
-      <InputDensity char={char} />
+      <InputDensity isExcludeSpace={isExcludeSpace} char={char} />
     </div>
   );
 }

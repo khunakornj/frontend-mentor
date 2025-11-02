@@ -8,17 +8,19 @@ import { prop, sortBy } from 'remeda';
 
 type Props = {
   char: string;
+  isExcludeSpace: boolean;
 } & React.ComponentProps<'div'>;
 
-function InputDensity({ char, className, ...props }: Props) {
+function InputDensity({ char, isExcludeSpace, className, ...props }: Props) {
   const [isSeeMore, toggleSeeMore] = useToggle(false);
 
   const densitySummary = useMemo(() => {
     const summary = new Map<string, { amount: number; percent: number }>();
-    const totalAmount = char.length;
+    const focusChar = isExcludeSpace ? char.replaceAll(' ', '') : char;
+    const totalAmount = focusChar.length;
 
-    for (const letter of char) {
-      if (letter === ' ') {
+    for (const letter of focusChar) {
+      if (isExcludeSpace && letter === ' ') {
         continue;
       }
 
@@ -34,7 +36,7 @@ function InputDensity({ char, className, ...props }: Props) {
     }
 
     return summary;
-  }, [char]);
+  }, [char, isExcludeSpace]);
 
   const densitySummaryDisplay = useMemo(() => {
     let arrResult = sortBy(

@@ -8,10 +8,19 @@ import { useMemo } from 'react';
 
 type Props = {
   char: string;
+  isExcludeSpace: boolean;
 } & React.ComponentProps<'div'>;
 
-function InputSummary({ char, className, ...props }: Props) {
-  const totalChar = useMemo(() => char.length, [char]);
+function InputSummary({
+  char,
+  isExcludeSpace: isExludeSpace,
+  className,
+  ...props
+}: Props) {
+  const totalChar = useMemo(
+    () => (isExludeSpace ? char.replaceAll(' ', '').length : char.length),
+    [char, isExludeSpace],
+  );
   const totalWord = useMemo(
     () => (char.length ? char.split(' ').filter((x) => x).length : 0),
     [char],
