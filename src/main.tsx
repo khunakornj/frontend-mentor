@@ -1,6 +1,6 @@
 import getRouteTree from './app/route.ts';
-import reportWebVitals from './reportWebVitals.ts';
 import * as TanStackQueryProvider from './shared/integrations/tanstack-query/root-provider.tsx';
+import reportWebVitals from './shared/lib/web-vitals.ts';
 import './styles/base.css';
 import {
   Outlet,
@@ -9,7 +9,6 @@ import {
   createRouter,
 } from '@tanstack/react-router';
 import type { RootRoute } from '@tanstack/react-router';
-import { TanStackRouterDevtools } from '@tanstack/react-router-devtools';
 import { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
 
@@ -17,7 +16,7 @@ const rootRoute: RootRoute = createRootRoute({
   component: () => (
     <>
       <Outlet />
-      <TanStackRouterDevtools />
+      {/* <TanStackRouterDevtools /> */}
     </>
   ),
 });
