@@ -1,0 +1,62 @@
+.root {
+  --border-size: 3px;
+
+  display: flex;
+  flex-direction: column;
+
+  & .radioContainer {
+    all: unset;
+    display: flex;
+    column-gap: 12px;
+    align-items: center;
+    padding: var(--space-0200) var(--space-0250);
+    cursor: pointer;
+    background-color: var(--color-neutral-000);
+    border: var(--border-size) solid;
+    border-color: var(--color-blue-100);
+    border-radius: var(--radius-10);
+
+
+    &[data-state='checked'] {
+      border-color: var(--color-blue-600);
+    }
+
+    & .radioLabel {
+      @mixin text-p5;
+
+      color: var(--color-neutral-900);
+      cursor: inherit;
+    }
+  
+    & .radioCircle {
+      --circle-size: 20px;
+
+      @mixin flex-center;
+
+      position: relative;
+      width: var(--circle-size);
+      height: var(--circle-size);
+      background-color: var(--color-neutral-000);
+      border: var(--border-size) solid;
+      border-color: var(--color-blue-200);
+      border-radius: 50%;
+  
+      & .radioIndicator {
+        position: absolute;
+        width: var(--circle-size);
+        height: var(--circle-size);
+        background-color: var(--color-blue-600);
+        border-radius: 50%;
+      }
+
+      & .radioInnerIndicator {
+        position: absolute;
+        inset: 0;
+        width: calc(var(--circle-size) / 2);
+        height: calc(var(--circle-size) / 2);
+        margin: auto;
+        background-color: var(--color-neutral-000);
+        border-radius: 50%;
+      }
+    }
+  }}

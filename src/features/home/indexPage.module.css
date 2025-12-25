@@ -2,15 +2,3 @@
   display: flex;
   flex-direction: row;
 }
-
-.title {
-  @mixin text-p1;
-
-  position: absolute;
-  display: flex;
-  color: var(--color-primary);
-
-  &:hover {
-    color: var(--color-error);
-  }
-}
