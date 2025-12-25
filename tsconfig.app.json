@@ -1,5 +1,13 @@
 {
   "compilerOptions": {
+    "plugins": [{
+        "name": "typescript-plugin-css-modules",
+        "options": {
+          "classnameTransform": "camelCaseOnly",
+          "customMatcher": "\\.module\\.(css|scss|less)$"
+        }
+      }],
+
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
     "target": "ES2022",
     "useDefineForClassFields": true,

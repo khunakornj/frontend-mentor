@@ -18,20 +18,20 @@
   --color-light-gradient: linear-gradient(180deg, #F5F5FF 72.99%, #E0E0FF 100%);
 
   /* Spacing Scale (8pt grid) */
-  --space-0: 0px;
-  --space-025: 2px;
-  --space-050: 4px;
-  --space-075: 6px;
-  --space-100: 8px;
-  --space-125: 10px;
-  --space-150: 12px;
-  --space-200: 16px;
-  --space-250: 20px;
-  --space-300: 24px;
-  --space-400: 32px;
-  --space-500: 40px;
-  --space-600: 48px;
-  --space-800: 64px;
+  --space-0000: 0px;
+  --space-0025: 2px;
+  --space-0050: 4px;
+  --space-0075: 6px;
+  --space-0100: 8px;
+  --space-0125: 10px;
+  --space-0150: 12px;
+  --space-0200: 16px;
+  --space-0250: 20px;
+  --space-0300: 24px;
+  --space-0400: 32px;
+  --space-0500: 40px;
+  --space-0600: 48px;
+  --space-0800: 64px;
   --space-1000: 80px;
 
   /* Typography */
@@ -45,10 +45,10 @@
   --weight-black: 900;
 
   /* Radi */
-  --radius-0: 0px;
-  --radius-4: 4px;
-  --radius-6: 6px;
-  --radius-8: 8px;
+  --radius-00: 0px;
+  --radius-04: 4px;
+  --radius-06: 6px;
+  --radius-08: 8px;
   --radius-10: 10px;
   --radius-12: 12px;
   --radius-16: 16px;

@@ -27,10 +27,14 @@ export default defineConfig([
       globals: globals.browser,
     },
     rules: {
+      // --- Plugins Rules ---
       'simple-import-sort/imports': 'error',
       'simple-import-sort/exports': 'error',
       'prettier/prettier': ['error'],
 
+      // --- CSS Modules Rules ---
+
+      // --- React Rules ---
       'react-refresh/only-export-components': 'off',
       '@typescript-eslint/no-unused-vars': [
         'error',
