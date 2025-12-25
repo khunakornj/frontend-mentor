@@ -8,6 +8,8 @@
   "rules": {
     "@stylistic/declaration-block-trailing-semicolon": "always",
     "@stylistic/indentation": 2,
+    "@stylistic/max-empty-lines": 1,
+    "@stylistic/no-eol-whitespace": true,
     "csstools/value-no-unknown-custom-properties": [
       true,
       {

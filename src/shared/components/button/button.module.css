@@ -15,6 +15,7 @@
 
     &:hover {
       background-color: var(--color-blue-700);
+      border-color: var(--color-blue-700);
     }
 
     &:active {
@@ -39,13 +40,17 @@
     color: var(--color-neutral-900);
     background-color: var(--color-neutral-000);
     border: 2px solid;
-    border-color: var(--color-neutral-900);
+    border-color: var(--color-neutral-300);
     border-radius: var(--radius-08);
 
     &:active {
       outline: 2px solid;
       outline-color: var(--color-blue-600);
       outline-offset: 2px;
+    }
+
+    &:hover {
+      border-color: var(--color-neutral-900);
     }
   }
 }

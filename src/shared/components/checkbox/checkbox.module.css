@@ -1,0 +1,63 @@
+.container {
+  --border-size: 3px;
+  --check-container-size: 16px;
+  --color-idle: var(--color-blue-100);
+  --color-active: var(--color-blue-600);
+
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-0200);
+  cursor: pointer;
+  border: var(--border-size) solid;
+  border-color: var(--color-idle);
+  border-radius: var(--radius-10);
+
+  &[data-state='checked'] {
+    border-color: var(--color-active);
+  }
+
+  & .checkContainer {
+    position: relative;
+    z-index: -2;
+    display: flex;
+    width: var(--check-container-size);
+    height: var(--check-container-size);
+    border: var(--border-size) solid;
+    border-color: var(--color-idle);
+    border-radius: var(--radius-04);
+  }
+
+  & .checkHighlight {
+    @mixin flex-center;
+
+    position: absolute;
+    inset: 0;
+    left: -3px;
+    z-index: -1;
+    width: var(--check-container-size);
+    height: var(--check-container-size);
+    margin: auto;
+    border: var(--border-size) solid;
+    border-color: var(--color-active);
+    border-radius: var(--radius-04);
+
+    &[data-state='checked'] {
+      background-color: var(--color-blue-600);
+    }
+
+    & .checkIcon {
+      width: 70%;
+      height: 70%;
+    }
+  }
+
+  & .label {
+    @mixin text-p6-regular;
+
+    padding-left: var(--space-0100);
+    color: var(--color-neutral-900);
+    cursor: inherit;
+  }
+}

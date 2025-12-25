@@ -1,5 +1,5 @@
 import Button from '@/shared/components/button/button';
-import RadioGroup from '@/shared/components/radio-group/radioGroup';
+import Checkbox from '@/shared/components/checkbox/checkbox';
 import TextInput from '@/shared/components/text-input/textInput';
 
 import style from './indexPage.module.css';
@@ -9,12 +9,7 @@ function IndexPage() {
     <div className={style.container}>
       <TextInput />
       <Button buttonType="secondary" />
-      <RadioGroup
-        data={[
-          { value: 'orange', label: 'Orange' },
-          { value: 'apple', label: 'Apple' },
-        ]}
-      />
+      <Checkbox value="tag" />
     </div>
   );
 }
