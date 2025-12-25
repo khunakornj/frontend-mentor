@@ -1,19 +1,58 @@
 :root {
-  --color-primary: #3b82f6;
-  --color-primary-dark: #2563eb;
-  --color-success: #10b981;
-  --color-error: #ef4444;
-  --color-surface: #fff;
-  
+  /* color */
+  --color-neutral-900: #21214D;
+  --color-neutral-600: #57577B;
+  --color-neutral-300: #9393B7;
+  --color-neutral-200: #CBCDD0;
+  --color-neutral-000: #FFF;
+  --color-blue-700: #2A4CD5;
+  --color-blue-600: #4865DB;
+  --color-blue-200: #C7D3F7;
+  --color-blue-100: #E0E6FA;
+  --color-red-700: #E60013;
+  --color-red-300: #FF9B99;
+  --color-indigo-200: #B8B1FF;
+  --color-blue-300: #89CAFF;
+  --color-green-300: #89E780;
+  --color-amber-300: #FFC97C;
+  --color-light-gradient: linear-gradient(180deg, #F5F5FF 72.99%, #E0E0FF 100%);
+
   /* Spacing Scale (8pt grid) */
-  --space-1: 0.25rem; /* 4px */
-  --space-2: 0.5rem;  /* 8px */
-  --space-4: 1rem;    /* 16px */
-  --space-8: 2rem;    /* 32px */
+  --space-0: 0px;
+  --space-025: 2px;
+  --space-050: 4px;
+  --space-075: 6px;
+  --space-100: 8px;
+  --space-125: 10px;
+  --space-150: 12px;
+  --space-200: 16px;
+  --space-250: 20px;
+  --space-300: 24px;
+  --space-400: 32px;
+  --space-500: 40px;
+  --space-600: 48px;
+  --space-800: 64px;
+  --space-1000: 80px;
 
   /* Typography */
-  --font-sans: 'Inter', system-ui, sans-serif;
-  --text-base: 1rem;
-  --text-lg: 1.125rem;
+  --weight-extra-light: 200;
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semi-bold: 600;
   --weight-bold: 700;
+  --weight-extra-bold: 800;
+  --weight-black: 900;
+
+  /* Radi */
+  --radius-0: 0px;
+  --radius-4: 4px;
+  --radius-6: 6px;
+  --radius-8: 8px;
+  --radius-10: 10px;
+  --radius-12: 12px;
+  --radius-16: 16px;
+  --radius-20: 20px;
+  --radius-24: 24px;
+  --radius-full: 999px;
 }

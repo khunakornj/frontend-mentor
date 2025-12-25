@@ -4,7 +4,7 @@
 }
 
 .title {
-  @mixin text-preset-1;
+  @mixin text-p1;
 
   position: absolute;
   display: flex;
