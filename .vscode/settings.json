@@ -1,4 +1,38 @@
 {
-  "typescript.preferences.autoImportFileExcludePatterns": ["**/dayjs/**"],
-  "css.lint.unknownAtRules": "ignore"
+  "typescript.preferences.autoImportFileExcludePatterns": [
+    "**/dayjs/**",
+  ],
+  "stylelint.validate": ["css", "postcss"],
+  "files.readonlyInclude": {
+    "**/routeTree.gen.ts": true
+  },
+  "files.watcherExclude": {
+    "**/routeTree.gen.ts": true
+  },
+  "search.exclude": {
+    "**/routeTree.gen.ts": true
+  },
+  "[css]": {
+    "editor.defaultFormatter": null, 
+    "editor.formatOnSave": false 
+  },
+  "[postcss]": {
+    "editor.defaultFormatter": null,
+    "editor.formatOnSave": false
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit",
+    "source.fixAll.stylelint": "explicit"
+  },
+  "eslint.format.enable": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  }
 }

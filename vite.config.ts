@@ -1,16 +1,34 @@
-import tailwindcss from '@tailwindcss/vite';
-import viteReact from '@vitejs/plugin-react';
-import { resolve } from 'node:path';
+import { tanstackRouter } from '@tanstack/router-plugin/vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
 import { defineConfig } from 'vite';
 
-// https://vitejs.dev/config/
+// https://vite.dev/config/
 export default defineConfig({
-  base: '/',
-  plugins: [viteReact(), tailwindcss()],
+  css: {
+    modules: {
+      localsConvention: 'camelCase',
+    },
+  },
+
+  plugins: [
+    tanstackRouter({
+      target: 'react',
+      autoCodeSplitting: true,
+    }),
+
+    react({
+      babel: {
+        plugins: [['babel-plugin-react-compiler']],
+      },
+    }),
+  ],
   resolve: {
     alias: {
-      '@': resolve(__dirname, './src'),
-      '@assets': resolve(__dirname, './src/shared/assets'),
+      '@': path.resolve(__dirname, './src'),
+      '@shared': path.resolve(__dirname, './src/shared'),
+      '@features': path.resolve(__dirname, './src/features'),
+      '@styles': path.resolve(__dirname, './src/styles'),
     },
   },
 });

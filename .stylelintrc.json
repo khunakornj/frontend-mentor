@@ -1,0 +1,21 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-config-recess-order"],
+  "plugins": ["stylelint-order", "@stylistic/stylelint-plugin"],
+  "rules": {
+    "@stylistic/declaration-block-trailing-semicolon": "always",
+    "@stylistic/indentation": 2,
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "define-mixin",
+          "mixin",
+          "mixin-content",
+          "value"
+        ]
+      }
+    ],
+    "selector-class-pattern": null,
+    "no-descending-specificity": null
+  }
+}
