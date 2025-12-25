@@ -1,0 +1,17 @@
+.helloText {
+  @mixin text-p3;
+
+  color: var(--color-blue-600);
+}
+
+.feelingText {
+  @mixin text-p1;
+
+  color: var(--color-neutral-900);
+}
+
+.dateText {
+  @mixin text-p6;
+
+  color: var(--color-neutral-600);
+}

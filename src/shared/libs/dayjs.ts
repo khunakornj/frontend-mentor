@@ -13,4 +13,4 @@ dayjs.tz.setDefault('Asia/Bangkok');
 
 const myDayjs = dayjs;
 
-export default myDayjs;
+export { myDayjs };

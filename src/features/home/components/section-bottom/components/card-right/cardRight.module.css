@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+  padding: 32px;
+
+  .title {
+    @mixin text-p3;
+
+    color: var(--color-neutral-900);
+  }
+
+}
+
+.svgContainer {
+  --dynamic-bar-color: var(--color-blue-600);
+
+  .labelText {
+    @mixin text-p9;
+
+    text-anchor: middle;
+    fill: var(--color-neutral-600);
+  }
+
+  .labelNum {
+    @mixin text-p8;
+
+    text-anchor: middle;
+    fill: var(--color-neutral-900);
+  }
+
+  .bar {
+    opacity: 0.9;
+    fill: var(--dynamic-bar-color);
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .grid {
+    text-anchor: middle;
+  }
+
+}

@@ -1,0 +1,50 @@
+.cardLeft {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  padding: 24px;
+  border: 2px solid;
+  border-color: var(--color-blue-100);
+  border-radius: var(--radius-16);
+
+  .titleBox {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+
+    .heading {
+      @mixin text-p4;
+
+      color: var(--color-neutral-900);
+    }
+
+    .details {
+      @mixin text-p7;
+
+      color: var(--color-neutral-900);
+    }
+
+    .textSection {
+      display: flex;
+      flex-direction: row;
+      column-gap: .1875rem;
+      align-items: baseline;
+    }
+
+    .boxSection {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      row-gap: 12px;
+      padding: 41.75px 20px;
+      background-color: var(--color-blue-100);
+      border-radius: var(--radius-16);
+
+      .patternImage {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+}

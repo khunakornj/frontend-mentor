@@ -4,7 +4,6 @@
   --color-idle: var(--color-blue-100);
   --color-active: var(--color-blue-600);
 
-  all: unset;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,8 +32,8 @@
     @mixin flex-center;
 
     position: absolute;
-    inset: 0;
-    left: -3px;
+    top: calc(var(--border-size) * -1);
+    left: calc(var(--border-size) * -1);
     z-index: -1;
     width: var(--check-container-size);
     height: var(--check-container-size);
