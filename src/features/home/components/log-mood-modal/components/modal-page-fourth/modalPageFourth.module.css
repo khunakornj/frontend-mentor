@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+
+  .heading {
+    @mixin text-p3;
+
+    color: var(--color-neutral-900);
+  }
+
+  & .radioGroup {
+    row-gap: 12px;
+  }
+}

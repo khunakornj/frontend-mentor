@@ -12,6 +12,7 @@
   border: var(--border-size) solid;
   border-color: var(--color-idle);
   border-radius: var(--radius-10);
+  isolation: isolate;
 
   &[data-state='checked'] {
     border-color: var(--color-active);

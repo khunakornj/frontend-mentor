@@ -8,24 +8,29 @@ type Data = {
   value: string;
   label?: string;
   defaultChecked?: boolean;
-  onClick?: (value: string) => void;
 };
 
 type Props = {
   className?: string;
   data: Data[];
+  onRadioChange?: (val: string) => void;
 };
 
-function RadioGroup({ data, className }: Props) {
+function RadioGroup({ data, className, onRadioChange, ...props }: Props) {
   return (
-    <Radio.Root className={joinClass(style.root, className)}>
-      {data.map(({ value, label, onClick }) => (
+    <Radio.Root
+      {...props}
+      className={joinClass(style.root, className)}
+      onValueChange={(val) => {
+        onRadioChange?.(val);
+      }}
+    >
+      {data.map(({ value, label }) => (
         <Radio.Item
           value={value}
           key={value}
           id={value}
           className={style.radioContainer}
-          onClick={onClick ? () => onClick(value) : undefined}
         >
           <div className={style.radioCircle}>
             <Radio.Indicator className={style.radioIndicator}>

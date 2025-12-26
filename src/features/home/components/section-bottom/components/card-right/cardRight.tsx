@@ -39,7 +39,7 @@ function getYTickFormat(v: number) {
 
 function CardRightBarGroup() {
   const width = 710;
-  const height = 312;
+  const height = 330;
 
   const margin = { top: 30, bottom: 60, left: 60, right: 30 };
   const xMax = width - margin.left - margin.right;

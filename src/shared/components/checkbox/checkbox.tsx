@@ -9,8 +9,9 @@ function CheckIcon() {
   return (
     <div
       style={{
-        width: '75%',
-        height: '75%',
+        width: '85%',
+        height: '85%',
+        marginTop: '2px',
       }}
     >
       <ImageWrapper src={checkIconUrl} alt="check-icon" />
@@ -21,14 +22,17 @@ function CheckIcon() {
 type Props = {
   label?: string;
   value: string;
-  onClick?: (val: string) => void;
-};
+  onCheck?: (val: { value: string; checked: boolean }) => void;
+} & Check.CheckboxProps;
 
-function Checkbox({ label, value, onClick }: Props) {
+function Checkbox({ label, value, onCheck, ...props }: Props) {
   return (
     <Check.Root
       className={style.container}
-      onClick={onClick ? () => onClick(value) : undefined}
+      onCheckedChange={(checked) => {
+        onCheck?.({ value, checked: Boolean(checked) });
+      }}
+      {...props}
     >
       <div className={style.checkContainer}>
         <Check.Indicator className={style.checkHighlight}>

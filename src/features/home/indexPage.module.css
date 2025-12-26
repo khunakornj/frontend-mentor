@@ -3,9 +3,11 @@
   flex-direction: column;
   row-gap: 64px;
   width: 100%;
+  min-height: 100%;
   padding-top: 40px;
   padding-right: 135px;
   padding-left: 135px;
+  background: var(--color-light-gradient);
 
   & .sectionTop {
     display: flex;

@@ -20,5 +20,6 @@ export function useChangePage() {
     currentPage: state,
     nextPage,
     resetPage,
+    isLast,
   };
 }

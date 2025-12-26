@@ -1,0 +1,82 @@
+export const MODAL_PAGE_SECOND_CHECKBOX_DATA = [
+  {
+    label: 'Joyful',
+    value: 'joyful',
+  },
+  {
+    label: 'Down',
+    value: 'down',
+  },
+  {
+    label: 'Anxious',
+    value: 'anxious',
+  },
+  {
+    label: 'Calm',
+    value: 'calm',
+  },
+  {
+    label: 'Excited',
+    value: 'excited',
+  },
+  {
+    label: 'Frustrated',
+    value: 'frustrated',
+  },
+  {
+    label: 'Lonely',
+    value: 'lonely',
+  },
+  {
+    label: 'Grateful',
+    value: 'grateful',
+  },
+  {
+    label: 'Overwhelmed',
+    value: 'overwhelmed',
+  },
+  {
+    label: 'Motivated',
+    value: 'motivated',
+  },
+  {
+    label: 'Irritable',
+    value: 'irritable',
+  },
+  {
+    label: 'Peaceful',
+    value: 'peaceful',
+  },
+  {
+    label: 'Tired',
+    value: 'tired',
+  },
+  {
+    label: 'Hopeful',
+    value: 'hopeful',
+  },
+  {
+    label: 'Confident',
+    value: 'confident',
+  },
+  {
+    label: 'Stressed',
+    value: 'stressed',
+  },
+  {
+    label: 'Content',
+    value: 'content',
+  },
+  {
+    label: 'Disappointed',
+    value: 'disappointed',
+  },
+  {
+    label: 'Optimistic',
+    value: 'optimistic',
+  },
+  {
+    label: 'Restless',
+    value: 'restless',
+  },
+];

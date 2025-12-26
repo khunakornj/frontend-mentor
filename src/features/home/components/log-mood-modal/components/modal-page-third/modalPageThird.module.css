@@ -1,0 +1,44 @@
+
+.container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+
+  & .heading {
+    @mixin text-p3;
+
+    color: var(--color-neutral-900);
+  }
+
+  & .textAreaContainer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+
+    & .textArea {
+      @mixin text-p6;
+
+      width: 100%;
+      min-height: 150px;
+      padding: 12px 16px;
+      border: 1px solid;
+      border-color: var(--color-neutral-300);
+      border-radius: var(--radius-10);
+
+      &::placeholder {
+        @mixin text-p6-italic;
+
+        font-style: italic;
+        color: var(--color-neutral-600);
+      }
+
+    }
+
+    .countNum {
+      @mixin text-p8;
+
+      margin-left: auto;
+      color: var(--color-neutral-600);
+    }
+  }
+}

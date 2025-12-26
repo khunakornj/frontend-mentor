@@ -1,3 +1,5 @@
+import * as Label from '@radix-ui/react-label';
+
 import style from './button.module.css';
 
 type Props = {
@@ -14,7 +16,7 @@ function Button({ buttonType = 'primary', text, ...props }: Props) {
         }
         {...props}
       >
-        {text}
+        <Label.Root>{text}</Label.Root>
       </button>
     </div>
   );

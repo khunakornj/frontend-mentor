@@ -15,7 +15,7 @@
   --color-blue-300: #89CAFF;
   --color-green-300: #89E780;
   --color-amber-300: #FFC97C;
-  --color-light-gradient: linear-gradient(180deg, #F5F5FF 72.99%, #E0E0FF 100%);
+  --color-light-gradient: linear-gradient(180deg, #F5F5FF 20.99%, #E0E0FF 100%);
 
   /* Spacing Scale (8pt grid) */
   --space-0000: 0px;

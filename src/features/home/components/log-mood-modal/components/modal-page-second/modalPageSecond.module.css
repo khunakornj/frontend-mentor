@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+
+  & .title {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+
+    & .heading {
+      @mixin text-p3;
+
+      color: var(--color-neutral-900);
+    }
+
+    & .details {
+      @mixin text-p6;
+
+      color: var(--color-neutral-600);
+    }
+
+  }
+
+  & .checkBoxGroup {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 12px 16px;
+  }
+}
