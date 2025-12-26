@@ -1,18 +1,26 @@
 {
   "extends": ["stylelint-config-standard", "stylelint-config-recess-order"],
-  "plugins": ["stylelint-order", "@stylistic/stylelint-plugin"],
+  "plugins": [
+    "stylelint-order",
+    "@stylistic/stylelint-plugin",
+    "stylelint-value-no-unknown-custom-properties"
+  ],
   "rules": {
     "@stylistic/declaration-block-trailing-semicolon": "always",
     "@stylistic/indentation": 2,
+    "@stylistic/max-empty-lines": 1,
+    "@stylistic/no-eol-whitespace": true,
+
+    "csstools/value-no-unknown-custom-properties": [
+      true,
+      {
+        "importFrom": ["src/styles/tokens.css"]
+      }
+    ],
     "at-rule-no-unknown": [
       true,
       {
-        "ignoreAtRules": [
-          "define-mixin",
-          "mixin",
-          "mixin-content",
-          "value"
-        ]
+        "ignoreAtRules": ["define-mixin", "mixin", "mixin-content", "value"]
       }
     ],
     "selector-class-pattern": null,

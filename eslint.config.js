@@ -1,5 +1,4 @@
 import js from '@eslint/js';
-import eslintConfigPrettier from 'eslint-config-prettier';
 import prettierPlugin from 'eslint-plugin-prettier';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
@@ -27,10 +26,21 @@ export default defineConfig([
       globals: globals.browser,
     },
     rules: {
+      // --- Plugins Rules ---
       'simple-import-sort/imports': 'error',
       'simple-import-sort/exports': 'error',
       'prettier/prettier': ['error'],
 
+      // --- React Rules ---
+      'no-trailing-spaces': 'error',
+      'no-multiple-empty-lines': [
+        'error',
+        {
+          max: 1, // Maximum 1 empty line between code blocks
+          maxEOF: 0, // No empty lines at the end of the file
+          maxBOF: 0, // No empty lines at the beginning of the file
+        },
+      ],
       'react-refresh/only-export-components': 'off',
       '@typescript-eslint/no-unused-vars': [
         'error',
@@ -42,5 +52,4 @@ export default defineConfig([
       ],
     },
   },
-  eslintConfigPrettier,
 ]);
