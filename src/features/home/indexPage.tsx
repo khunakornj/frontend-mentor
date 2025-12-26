@@ -1,9 +1,13 @@
-import style from './indexPage.module.css';
+import ButtonMain from '@/shared/components/button-main/buttonMain';
 
 function IndexPage() {
   return (
-    <div className={style.container}>
-      <h1 className={style.title}>Hello</h1>
+    <div
+      style={{
+        width: '200px',
+      }}
+    >
+      <ButtonMain />
     </div>
   );
 }
