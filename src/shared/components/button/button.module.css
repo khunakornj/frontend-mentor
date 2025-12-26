@@ -1,10 +1,10 @@
 .container {
-  @mixin flex-center;
-
   & .button {
     @mixin text-p5;
 
-    width: auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
     height: auto;
     padding: var(--space-0150) var(--space-0400);
     color: var(--color-neutral-000);
@@ -34,7 +34,9 @@
   & .buttonSecondary {
     @mixin text-p5;
 
-    width: auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
     height: auto;
     padding: var(--space-0100) var(--space-0200);
     color: var(--color-neutral-900);

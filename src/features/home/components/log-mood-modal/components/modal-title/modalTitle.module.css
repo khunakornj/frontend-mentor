@@ -1,0 +1,31 @@
+.container {
+  --grid-count: 2;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+
+  & .heading {
+    @mixin text-p2;
+
+    color: var(--color-neutral-900);
+  }
+
+  & .dashContainer {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-count), 1fr);
+    column-gap: 16px;
+    min-height: 6px;
+  }
+
+  & .dash {
+    display: block;
+    width: auto;
+    background-color: var(--color-blue-200);
+    border-radius: var(--radius-full);
+
+    &[data-active] {
+      background-color: var(--color-blue-600);
+    }
+  }
+}

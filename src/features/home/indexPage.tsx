@@ -1,5 +1,6 @@
 import Button from '@/shared/components/button/button';
 
+import LogMoodModal from './components/log-mood-modal/logMoodModal';
 import SectionBottom from './components/section-bottom/sectionBottom';
 import SectionTitle from './components/section-title/sectionTitle';
 import SectionTop from './components/section-top/sectionTop';
@@ -12,7 +13,9 @@ function IndexPage() {
       <SectionTitle className={style.sectionTitle} />
 
       <div className={style.sectionMoodButton}>
-        <Button buttonType="primary" text="Log today's mood" />
+        <LogMoodModal>
+          <Button buttonType="primary" text="Log today's mood" />
+        </LogMoodModal>
       </div>
 
       <SectionBottom className={style.sectionBottom} />
