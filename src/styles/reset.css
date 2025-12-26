@@ -1,5 +1,4 @@
 /* stylelint-disable selector-id-pattern */
-
 @layer base {
   /* 1. Use a more-intuitive box-sizing model */
   *,
@@ -22,6 +21,8 @@
   }
 
   body {
+    min-height: 100dvh;
+
     /* 4. Add accessible line-height */
     line-height: 1.5;
 
