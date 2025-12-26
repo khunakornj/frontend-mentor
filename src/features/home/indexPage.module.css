@@ -4,13 +4,6 @@
 }
 
 .title {
-  @mixin text-preset-1;
-
   position: absolute;
   display: flex;
-  color: var(--color-primary);
-
-  &:hover {
-    color: var(--color-error);
-  }
 }

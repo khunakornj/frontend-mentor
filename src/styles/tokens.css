@@ -1,10 +1,26 @@
 :root {
-  --color-primary: #3b82f6;
-  --color-primary-dark: #2563eb;
-  --color-success: #10b981;
-  --color-error: #ef4444;
-  --color-surface: #fff;
-  
+  --color-neutral-900: #2E1401;
+  --color-neutral-600: #6D5B4D;
+  --color-neutral-100: #F7F3F0;
+  --color-neutral-000: #FFF;
+  --color-yellow-500: #F8CB46;
+  --color-blue-400: #92ADEB;
+  --color-blue-600: #5072C7;
+  --color-teal-400: #47D9C9;
+  --color-pink-400: #FC8AE5;
+  --color-pink-500: #F073A3;
+  --color-pink-700: #E11966;
+  --radius-00: 0px;
+  --radius-04: 4px;
+  --radius-06: 6px;
+  --radius-08: 8px;
+  --radius-10: 10px;
+  --radius-12: 12px;
+  --radius-16: 16px;
+  --radius-20: 20px;
+  --radius-24: 24px;
+  --radius-full: 999px;
+
   /* Spacing Scale (8pt grid) */
   --space-1: 0.25rem; /* 4px */
   --space-2: 0.5rem;  /* 8px */
@@ -12,8 +28,14 @@
   --space-8: 2rem;    /* 32px */
 
   /* Typography */
-  --font-sans: 'Inter', system-ui, sans-serif;
-  --text-base: 1rem;
-  --text-lg: 1.125rem;
+
+  --weight-thin: 100;
+  --weight-extra-light: 200;
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semi-bold: 600;
   --weight-bold: 700;
+  --weight-extra-bold: 800;
+  --weight-black: 900;
 }

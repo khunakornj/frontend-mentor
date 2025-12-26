@@ -1,6 +1,76 @@
-@define-mixin text-preset-1 {
-  font-size: 2.875rem;
-  font-weight: 600;
-  line-height: 125%;
-  letter-spacing: -0.75px;
+@define-mixin textP1 {
+  font-size: 2.5rem;
+  font-weight: var(--weight-bold);
+  line-height: 120%;
+  letter-spacing: 0;
+}
+
+@define-mixin textP1Tablet {
+  font-size: 2rem;
+  font-weight: var(--weight-bold);
+  line-height: 120%;
+  letter-spacing: 0;
+}
+
+@define-mixin textP1Mobile {
+  font-size: 1.5rem;
+  font-weight: var(--weight-bold);
+  line-height: 120%;
+  letter-spacing: 0;
+}
+
+@define-mixin textP2 {
+  font-size: 1.5rem;
+  font-weight: var(--weight-semi-bold);
+  line-height: 120%;
+  letter-spacing: 0;
+}
+
+@define-mixin textP3 {
+  font-size: 1.25rem;
+  font-weight: var(--weight-semi-bold);
+  line-height: 120%;
+  letter-spacing: 0;
+}
+
+@define-mixin textP4SemiBold {
+  font-size: 1rem;
+  font-weight: var(--weight-semi-bold);
+  line-height: 120%;
+  letter-spacing: 0;
+}
+
+@define-mixin textP4Medium {
+  font-size: 1rem;
+  font-weight: var(--weight-medium);
+  line-height: 120%;
+  list-style-position: 0;
+}
+
+@define-mixin textP4Regular {
+  font-size: 1rem;
+  font-weight: var(--weight-regular);
+  line-height: 140%;
+  letter-spacing: 0;
+}
+
+@define-mixin textP5 {
+  font-size: .875rem;
+  font-weight: var(--weight-medium);
+  line-height: 140%;
+  letter-spacing: 0;
+}
+
+@define-mixin textP5Regular {
+  font-size: .875rem;
+  font-weight: var(--weight-regular);
+  line-height: 140%;
+  letter-spacing: 0;
+}
+
+@define-mixin textP6 {
+  font-size: .75rem;
+  font-weight: var(--weight-medium);
+  line-height: 130%;
+  letter-spacing: -3%;
 }
