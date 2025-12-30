@@ -28,6 +28,7 @@ const ImageWrapper = forwardRef(
         src={src}
         alt={alt}
         className={clsx(styles.image)}
+        draggable="false"
         style={
           { objectFit, '--aspect-ratio': aspectRatio } as React.CSSProperties
         }

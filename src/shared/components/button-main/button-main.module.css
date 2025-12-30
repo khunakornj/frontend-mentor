@@ -1,4 +1,6 @@
 .base {
+  @mixin textP4Medium;
+
   display: flex;
   flex-direction: row;
   column-gap: 8px;
@@ -6,7 +8,7 @@
   width: auto;
   padding: 13.5px 20px;
   cursor: pointer;
-  border: 2px solid;
+  border: 1px solid;
   border-radius: var(--radius-full);
   box-shadow: 2px 2px var(--color-neutral-900);
 
@@ -30,8 +32,7 @@
   background-color: var(--color-neutral-000);
 }
 .label {
-  @mixin textP4Medium;
-
+  font: inherit;
   color: var(--color-neutral-900);
   cursor: inherit;
 }

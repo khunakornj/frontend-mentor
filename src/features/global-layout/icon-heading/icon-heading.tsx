@@ -13,6 +13,7 @@ function IconHeading() {
           { value: 'study', label: 'Study Mode' },
           { value: 'all', label: 'All Cards' },
         ]}
+        defaultValue="study"
       />
     </div>
   );

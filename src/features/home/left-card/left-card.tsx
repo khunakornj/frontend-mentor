@@ -1,8 +1,13 @@
+import style from './left-card.module.css';
+import MidSection from './mid-section/mid-section';
+import TopSection from './top-section/top-section';
+
 function LeftCard() {
   return (
-    <section className="">
-      <h1></h1>
-    </section>
+    <div className={style.container}>
+      <TopSection />
+      <MidSection />
+    </div>
   );
 }
 

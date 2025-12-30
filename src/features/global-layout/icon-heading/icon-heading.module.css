@@ -3,10 +3,12 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  margin-bottom: 10px;
 
   .img {
     width: fit-content;
     height: fit-content;
+    aspect-ratio: 16 / 9;
   }
 
 }

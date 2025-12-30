@@ -1,14 +1,12 @@
-import { UiTextArea } from '@shared/components/ui-input/ui-input';
+import style from './index-page.module.css';
+import LeftCard from './left-card/left-card';
+import RightCard from './right-card/right-card';
 
 function IndexPage() {
   return (
-    <div
-      style={{
-        width: '300px',
-        height: '300px',
-      }}
-    >
-      <UiTextArea />
+    <div className={style.container}>
+      <LeftCard />
+      <RightCard />
     </div>
   );
 }

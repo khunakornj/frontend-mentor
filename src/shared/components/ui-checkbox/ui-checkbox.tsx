@@ -26,7 +26,7 @@ const UiCheckbox = forwardRef(
         }}
         {...props}
       >
-        <div className={style.indicator}>
+        <Checkbox.Control className={style.indicator}>
           <Checkbox.Indicator className={style.indicatorSelect}>
             <ImageWrapper
               className={style.img}
@@ -34,9 +34,11 @@ const UiCheckbox = forwardRef(
               alt="check-icon"
             />
           </Checkbox.Indicator>
-        </div>
-
-        {label && <label className={style.label}>{label}</label>}
+        </Checkbox.Control>
+        {label && (
+          <Checkbox.Label className={style.label}>{label}</Checkbox.Label>
+        )}
+        <Checkbox.HiddenInput />
       </Checkbox.Root>
     );
   },

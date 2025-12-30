@@ -7,17 +7,19 @@ import style from './progress-bar.module.css';
 type Props = {
   className?: string;
   value: number;
+  maxValue?: number;
 };
 
 const ProgressBar = forwardRef(
   (
-    { value, className, ...props }: Props,
+    { value, className, maxValue = 100, ...props }: Props,
     ref: React.ForwardedRef<HTMLDivElement>,
   ) => (
     <Progress.Root
       value={value}
       ref={ref}
       className={clsx(style.root, className)}
+      max={maxValue}
       {...props}
     >
       <Progress.Track className={style.track}>

@@ -36,7 +36,7 @@ export default defineConfig([
       'no-multiple-empty-lines': [
         'error',
         {
-          max: 1, // Maximum 1 empty line between code blocks
+          max: 2, // Maximum 1 empty line between code blocks
           maxEOF: 0, // No empty lines at the end of the file
           maxBOF: 0, // No empty lines at the beginning of the file
         },

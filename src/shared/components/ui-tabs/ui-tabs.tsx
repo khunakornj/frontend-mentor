@@ -1,45 +1,49 @@
 import { Tabs } from '@ark-ui/react/tabs';
 import clsx from 'clsx';
-import { forwardRef } from 'react';
 
 import style from './ui-tabs.module.css';
 
-type TabItem = {
+type TabItem<T> = {
   label?: string;
-  value: string;
+  value: T;
 };
-type Props = {
-  items: TabItem[];
+type Props<T> = {
+  items: TabItem<T>[];
   className?: string;
-  onSelect?: (val: string) => void;
+  onSelect?: (val: T) => void;
+  defaultValue?: T;
 };
 
-const UiTabs = forwardRef(
-  (
-    { onSelect, className, items, ...props }: Props,
-    ref: React.ForwardedRef<HTMLDivElement>,
-  ) => {
-    return (
-      <Tabs.Root
-        ref={ref}
-        {...props}
-        onValueChange={(v: TabItem) => onSelect?.(v.value)}
-        className={clsx(style.root, className)}
-      >
-        <Tabs.List className={style.list}>
-          {items.map((item) => (
-            <Tabs.Trigger
-              className={style.trigger}
-              value={item.value}
-              key={item.value}
-            >
-              {item.label || item.value}
-            </Tabs.Trigger>
-          ))}
-        </Tabs.List>
-      </Tabs.Root>
-    );
-  },
-);
+function UiTabs<T extends string>({
+  onSelect,
+  className,
+  items,
+  defaultValue,
+  ...props
+}: Props<T>) {
+  return (
+    <Tabs.Root
+      onValueChange={(v) => {
+        const obj = v as TabItem<T>;
+        onSelect?.(obj.value);
+      }}
+      className={clsx(style.root, className)}
+      defaultValue={defaultValue}
+      {...props}
+    >
+      <Tabs.List className={style.list}>
+        {items.map((item) => (
+          <Tabs.Trigger
+            className={style.trigger}
+            value={item.value}
+            key={item.value}
+          >
+            {item.label || item.value}
+          </Tabs.Trigger>
+        ))}
+      </Tabs.List>
+    </Tabs.Root>
+  );
+}
 
 export default UiTabs;
