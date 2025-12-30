@@ -1,0 +1,70 @@
+.root {
+  --box-shadow-color: var(--color-neutral-900);
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+
+  .label {
+    @mixin textP4Medium;
+
+    color: var(--color-neutral-900);
+  }
+
+  .input {
+    display: block;
+    width: auto;
+    height: fit-content;
+    padding: 16px;
+    outline: none;
+    background-color: var(--color-neutral-000);
+    border: 1px solid;
+    border-color: var(--color-neutral-900);
+    border-radius: var(--radius-06);
+
+    &::placeholder {
+      @mixin textP4Regular;
+
+      color: var(--color-neutral-600);
+    }
+
+    &:focus {
+      --box-shadow-color: var(--color-blue-600);
+
+      border-color: var(--color-blue-600);
+    }
+
+    &:hover {
+      box-shadow: 2px 2px var(--box-shadow-color);
+    }
+
+    &[data-invalid] {
+      --box-shadow-color: var(--color-pink-700);
+
+      border-color: var(--color-pink-700);
+    }
+  }
+  .textArea {
+    height: 100px;
+    resize: none;
+  }
+
+  .err {
+    display: flex;
+    flex-direction: row;
+    column-gap: 6px;
+    align-items: center;
+
+    & .img {
+      width: 14px;
+      height: 14px;
+      margin-bottom: 2px;
+    }
+
+    & .errLabel {
+      @mixin textP5Regular;
+
+      color: var(--color-pink-700);
+    }
+  }
+}

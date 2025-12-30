@@ -1,0 +1,12 @@
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  .img {
+    width: fit-content;
+    height: fit-content;
+  }
+
+}

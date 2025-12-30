@@ -1,3 +1,4 @@
+import GlobalLayout from '@features/global-layout/global-layout';
 import { createFileRoute, Outlet } from '@tanstack/react-router';
 
 export const Route = createFileRoute('/_layout')({
@@ -6,9 +7,8 @@ export const Route = createFileRoute('/_layout')({
 
 function RouteComponent() {
   return (
-    <div>
-      <h1>App Layout</h1>
+    <GlobalLayout>
       <Outlet />
-    </div>
+    </GlobalLayout>
   );
 }

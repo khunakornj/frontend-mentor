@@ -8,7 +8,6 @@
     /* path */
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
       "@shared/*": ["./src/shared/*"],
       "@features/*": ["./src/features/*"],
       "@styles/*": ["./src/styles/*"],
