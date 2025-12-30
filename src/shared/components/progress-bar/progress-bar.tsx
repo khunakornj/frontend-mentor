@@ -1,4 +1,4 @@
-import { Progress } from '@base-ui/react/progress';
+import { Progress } from '@ark-ui/react';
 import clsx from 'clsx';
 import { forwardRef } from 'react';
 
@@ -21,7 +21,7 @@ const ProgressBar = forwardRef(
       {...props}
     >
       <Progress.Track className={style.track}>
-        <Progress.Indicator className={style.indicator} />
+        <Progress.Range className={style.indicator} />
       </Progress.Track>
     </Progress.Root>
   ),

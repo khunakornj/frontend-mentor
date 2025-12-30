@@ -1,4 +1,3 @@
-import { Button } from '@base-ui/react/button';
 import plusIcon from '@shared/assets/circle-plus.svg';
 import undoIcon from '@shared/assets/undo-alt.svg';
 import ImageWrapper from '@shared/component-utils/image/image';
@@ -29,7 +28,7 @@ const ButtonMain = forwardRef(
     { onClick, intent = 'primary', label, ...props }: Props,
     ref: React.ForwardedRef<HTMLButtonElement>,
   ) => (
-    <Button
+    <button
       ref={ref}
       {...props}
       className={button({ intent })}
@@ -43,7 +42,7 @@ const ButtonMain = forwardRef(
         className={style.img}
       />
       <label className={style.label}>{label || 'placeholder'}</label>
-    </Button>
+    </button>
   ),
 );
 

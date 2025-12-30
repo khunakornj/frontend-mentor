@@ -1,4 +1,4 @@
-import { Checkbox } from '@base-ui/react/checkbox';
+import { Checkbox } from '@ark-ui/react';
 import checkIcon from '@shared/assets/check.svg';
 import ImageWrapper from '@shared/component-utils/image/image';
 import clsx from 'clsx';
@@ -22,7 +22,7 @@ const UiCheckbox = forwardRef(
         ref={ref}
         className={clsx(style.root, className)}
         onCheckedChange={(check) => {
-          onCheck?.(check);
+          onCheck?.(Boolean(check.checked));
         }}
         {...props}
       >

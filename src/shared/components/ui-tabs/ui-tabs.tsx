@@ -1,4 +1,4 @@
-import { Tabs } from '@base-ui/react/tabs';
+import { Tabs } from '@ark-ui/react/tabs';
 import clsx from 'clsx';
 import { forwardRef } from 'react';
 
@@ -28,13 +28,13 @@ const UiTabs = forwardRef(
       >
         <Tabs.List className={style.list}>
           {items.map((item) => (
-            <Tabs.Tab
+            <Tabs.Trigger
               className={style.trigger}
               value={item.value}
               key={item.value}
             >
               {item.label || item.value}
-            </Tabs.Tab>
+            </Tabs.Trigger>
           ))}
         </Tabs.List>
       </Tabs.Root>

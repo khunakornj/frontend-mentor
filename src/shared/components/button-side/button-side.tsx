@@ -1,4 +1,3 @@
-import { Button } from '@base-ui/react/button';
 import angleLeft from '@shared/assets/angle-left.svg';
 import angleRight from '@shared/assets/angle-right.svg';
 import ImageWrapper from '@shared/component-utils/image/image';
@@ -16,7 +15,7 @@ const ButtonSide = forwardRef(
     { label = 'placeholder', onClick, ...props }: Props,
     ref: React.ForwardedRef<HTMLButtonElement>,
   ) => (
-    <Button
+    <button
       ref={ref}
       className={style.base}
       onClick={() => {
@@ -27,7 +26,7 @@ const ButtonSide = forwardRef(
       <ImageWrapper src={angleLeft} alt="angle-left" className={style.img} />
       <label className={style.label}>{label}</label>
       <ImageWrapper src={angleRight} alt="angle-right" className={style.img} />
-    </Button>
+    </button>
   ),
 );
 

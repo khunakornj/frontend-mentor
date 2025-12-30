@@ -1,4 +1,4 @@
-import { Field } from '@base-ui/react/field';
+import { Field } from '@ark-ui/react';
 import errorIcon from '@shared/assets/error-icon.svg';
 import ImageWrapper from '@shared/component-utils/image/image';
 import clsx from 'clsx';
@@ -21,24 +21,23 @@ export const UiInput = forwardRef(
     return (
       <Field.Root ref={ref} className={style.root} invalid={!!errorText}>
         {label && <Field.Label className={style.label}>{label}</Field.Label>}
-        <Field.Control
+        <Field.Input
           {...props}
           placeholder="e.g., What is the capital of France?"
           className={style.input}
           onChange={(e) => {
             onType?.(e.target.value);
           }}
-          render={<input />}
         />
         {!!errorText && (
-          <Field.Error className={style.err}>
+          <Field.ErrorText className={style.err}>
             <ImageWrapper
               className={style.img}
               src={errorIcon}
               alt="error-icon"
             />
             <label className={style.errLabel}>{errorText}</label>
-          </Field.Error>
+          </Field.ErrorText>
         )}
       </Field.Root>
     );
@@ -53,24 +52,23 @@ export const UiTextArea = forwardRef(
     return (
       <Field.Root ref={ref} className={style.root} invalid={!!errorText}>
         {label && <Field.Label className={style.label}>{label}</Field.Label>}
-        <Field.Control
+        <Field.Textarea
           {...props}
           placeholder="e.g., What is the capital of France?"
           className={clsx(style.input, style.textArea)}
-          render={<textarea />}
           onChange={(e) => {
             onType?.(e.target.value);
           }}
         />
         {!!errorText && (
-          <Field.Error className={style.err}>
+          <Field.ErrorText className={style.err}>
             <ImageWrapper
               className={style.img}
               src={errorIcon}
               alt="error-icon"
             />
             <label className={style.errLabel}>{errorText}</label>
-          </Field.Error>
+          </Field.ErrorText>
         )}
       </Field.Root>
     );
