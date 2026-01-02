@@ -1,13 +1,19 @@
 {
   "compilerOptions": {
-    "plugins": [{
+    "plugins": [
+      {
         "name": "typescript-plugin-css-modules",
         "options": {
-          "classnameTransform": "camelCaseOnly",
-          "customMatcher": "\\.module\\.(css|scss|less)$"
+          "customMatcher": "\\.module\\.(css|scss|less)$",
+          "additionalData": "@use 'inject' as *;",
+          "rendererOptions": {
+            "sass": {
+              "loadPaths": ["src/styles/foundation"],
+            }
+          }
         }
-      }],
-
+      }
+    ],
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
     "target": "ES2022",
     "useDefineForClassFields": true,
@@ -36,9 +42,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "@shared/*": ["./src/shared/*"],
-      "@features/*": ["./src/features/*"],
-      "@styles/*": ["./src/styles/*"],
+      "@assets/*": ["./src/shared/assets/*"]
     }
   },
   "include": ["src"]

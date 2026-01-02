@@ -6,8 +6,11 @@ import { defineConfig } from 'vite';
 // https://vite.dev/config/
 export default defineConfig({
   css: {
-    modules: {
-      localsConvention: 'camelCase',
+    preprocessorOptions: {
+      scss: {
+        loadPaths: ['src/styles/foundation'],
+        additionalData: `@use 'inject' as *;`,
+      },
     },
   },
 
@@ -15,6 +18,7 @@ export default defineConfig({
     tanstackRouter({
       target: 'react',
       autoCodeSplitting: true,
+      generatedRouteTree: './src/route-tree.gen.ts',
     }),
 
     react({
@@ -26,9 +30,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
-      '@shared': path.resolve(__dirname, './src/shared'),
-      '@features': path.resolve(__dirname, './src/features'),
-      '@styles': path.resolve(__dirname, './src/styles'),
+      '@assets/': path.resolve(__dirname, './src/shared/assets'),
     },
   },
 });

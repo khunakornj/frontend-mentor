@@ -4,7 +4,7 @@
   --color-success: #10b981;
   --color-error: #ef4444;
   --color-surface: #fff;
-  
+
   /* Spacing Scale (8pt grid) */
   --space-1: 0.25rem; /* 4px */
   --space-2: 0.5rem;  /* 8px */
@@ -16,4 +16,7 @@
   --text-base: 1rem;
   --text-lg: 1.125rem;
   --weight-bold: 700;
+
+  /* radius */
+  --radius-full: 999px;
 }

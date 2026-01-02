@@ -2,15 +2,19 @@
   "typescript.preferences.autoImportFileExcludePatterns": [
     "**/dayjs/**",
   ],
-  "stylelint.validate": ["css", "postcss"],
+
+  "css.validate": false,
+  "scss.validate": false,
+  "stylelint.validate": ["css", "scss"],
+
   "files.readonlyInclude": {
-    "**/routeTree.gen.ts": true
+    "**/route-tree.gen.ts": true
   },
   "files.watcherExclude": {
-    "**/routeTree.gen.ts": true
+    "**/route-tree.gen.ts": true
   },
   "search.exclude": {
-    "**/routeTree.gen.ts": true
+    "**/route-tree.gen.ts": true
   },
   "[css]": {
     "editor.defaultFormatter": null, 

@@ -2,11 +2,7 @@
   "recommendations": [
     "YoavBls.pretty-ts-errors",
     "esbenp.prettier-vscode",
-    "bradlc.vscode-tailwindcss",
-    "vunguyentuan.vscode-postcss",
     "vunguyentuan.vscode-css-variables",
-    "fongandrew.postcss-mixins-autocomplete",
-    "clinyong.vscode-css-modules",
     "stylelint.vscode-stylelint"
   ]
 }
