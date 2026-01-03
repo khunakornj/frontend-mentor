@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 
-import { useWeatherFooter } from './weather-footer.hooks';
+import { useWeatherFooter } from '@/features/home/hooks/use-weather-footer';
+
 import style from './weather-footer.module.scss';
 
 type Props = {

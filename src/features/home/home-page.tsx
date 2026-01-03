@@ -1,5 +1,5 @@
+import HomeWeather from './components/home-weather/home-weather';
 import style from './home-page.module.scss';
-import HomeWeather from './home-weather/home-weather';
 
 function HomePage() {
   return (
