@@ -1,0 +1,27 @@
+.root {
+  display: grid;
+  grid-template:
+    "main side" auto
+    "mid side" auto
+    "footer side" auto
+    / 800px 1fr;
+  gap: 32px;
+  padding: 64px 0;
+
+  .main {
+    grid-area: main;
+    height: 286px;
+  }
+
+  .mid {
+    grid-area: mid;
+  }
+
+  .footer {
+    grid-area: footer;
+  }
+
+  .side {
+    grid-area: side;
+  }
+}

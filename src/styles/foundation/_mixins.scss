@@ -1,6 +1,73 @@
+$font-extra-light: 200;
+$font-light: 300;
+$font-regular: 400;
+$font-medium: 500;
+$font-semibold: 600;
+$font-bold: 700;
+$font-extrabold: 800;
+
 @mixin text-p1 {
-  font-size: 2.875rem;
-  font-weight: 600;
-  line-height: 125%;
-  letter-spacing: -0.75px;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 6rem;
+  font-style: italic;
+  font-weight: $font-semibold;
+  line-height: 100%;
+  letter-spacing: -0.125rem;
+}
+
+@mixin text-p2 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 3.25rem;
+  font-weight: $font-bold;
+  line-height: 120%;
+  letter-spacing: 0;
+}
+
+@mixin text-p3 {
+  font-size: 2rem;
+  font-weight: $font-light;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+@mixin text-p4 {
+  font-size: 1.75rem;
+  font-weight: $font-bold;
+  line-height: 120%;
+  letter-spacing: 0;
+}
+
+@mixin text-p5 {
+  font-size: 1.25rem;
+  font-weight: $font-semibold;
+  line-height: 120%;
+  letter-spacing: 0;
+}
+
+@mixin text-p5-medium {
+  font-size: 1.25rem;
+  font-weight: $font-medium;
+  line-height: 120%;
+  letter-spacing: 0;
+}
+
+@mixin text-p6 {
+  font-size: 1.125rem;
+  font-weight: $font-medium;
+  line-height: 120%;
+  letter-spacing: 0;
+}
+
+@mixin text-p7 {
+  font-size: 1rem;
+  font-weight: $font-medium;
+  line-height: 120%;
+  letter-spacing: 0;
+}
+
+@mixin text-p8 {
+  font-size: .875rem;
+  font-weight: $font-medium;
+  line-height: 120%;
+  letter-spacing: 0;
 }

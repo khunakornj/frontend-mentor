@@ -1,0 +1,49 @@
+$bg-color: $color-neutral-600;
+
+.button {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  background-color: $bg-color;
+  border-radius: $radius-8;
+
+  &_label {
+    @include text-p7;
+
+    color: $color-neutral-000;
+  }
+
+  &_icon {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.content {
+  padding: 8px;
+  background-color: $bg-color;
+  border-radius: $radius-12;
+
+  &_item {
+    @include text-p7;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 8px;
+    color: $color-neutral-000;
+    background-color: inherit;
+    border-radius: $radius-8;
+
+    &:hover {
+      background-color: $color-neutral-700;
+    }
+
+    &_label {
+      cursor: default;
+    }
+
+  }
+
+}

@@ -1,0 +1,24 @@
+.root {
+  padding: 16px 24px;
+  color: $color-neutral-000;
+  cursor: pointer;
+  background-color: $color-blue-500;
+  border-radius: $radius-12;
+
+  &:hover {
+    background-color: $color-blue-700;
+  }
+
+  &:focus {
+    outline: 1px solid;
+    outline-color: $color-blue-500;
+    outline-offset: 1px;
+  }
+
+  .text {
+    @include text-p5-medium;
+
+    cursor: inherit;
+    user-select: none;
+  }
+}

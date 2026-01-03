@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React, { forwardRef } from 'react';
 
-import styles from './image.module.css';
+import styles from './image-wrapper.module.scss';
 
 type Props = {
   src: string;

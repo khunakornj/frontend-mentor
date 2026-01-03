@@ -15,6 +15,12 @@
         "importFrom": ["src/styles/tokens.css"]
       }
     ],
+    "declaration-block-no-redundant-longhand-properties": [
+      true,
+      {
+        "ignoreLonghands": ["/grid/"]
+      }
+    ],
     "scss/at-rule-no-unknown": true,
     "at-rule-no-unknown": null,
 

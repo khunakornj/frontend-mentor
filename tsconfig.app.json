@@ -4,6 +4,7 @@
       {
         "name": "typescript-plugin-css-modules",
         "options": {
+          "classnameTransform": "camelCaseOnly",
           "customMatcher": "\\.module\\.(css|scss|less)$",
           "additionalData": "@use 'inject' as *;",
           "rendererOptions": {

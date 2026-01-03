@@ -1,0 +1,29 @@
+.root {
+  min-height: 100%;
+  padding: 48px 112px;
+  background-color: $color-neutral-900;
+
+  .headerTab {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-height: 43px;
+
+    .headerLogo {
+      display: flex;
+      flex-direction: row;
+      column-gap: 10px;
+
+      &_img {
+        width: 40px;
+        height: 40px;
+      }
+
+      &_text {
+        width: fit-content;
+        height: 40px;
+      }
+    }
+  }
+}

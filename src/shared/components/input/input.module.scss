@@ -1,0 +1,39 @@
+.root {
+  @include text-p5-medium;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: fit-content;
+  padding: 18px 24px;
+  color: $color-neutral-200;
+  cursor: text;
+  background-color: $color-neutral-800;
+  border: 2px solid;
+  border-color: transparent;
+  border-radius: $radius-12;
+
+  &:hover {
+    background-color: $color-neutral-700;
+
+  }
+
+  &:focus-within {
+    border-color: $color-neutral-200;
+  }
+}
+
+.input {
+  margin-left: 16px;
+  color: $color-neutral-200;
+  outline: none;
+
+  &::placeholder {
+    color: inherit;
+  }
+}
+
+.img {
+  width: 20px;
+  height: 20px;
+}

@@ -1,4 +1,5 @@
-@import 'https://fonts.googleapis.com/css2?family=Reddit+Sans:ital@0;1&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@12..96&display=swap';
 @import './reset.css';
 @import './tokens.css';
 
@@ -6,6 +7,6 @@
   html,
   body {
     overscroll-behavior: none;
-    font-family: "Reddit Sans", sans-serif;
+    font-family: "DM Sans", sans-serif;
   }
 }

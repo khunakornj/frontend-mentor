@@ -1,0 +1,26 @@
+.root {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    background-color: $color-neutral-800;
+    border-radius: $radius-12;
+
+    &_label {
+      @include text-p6;
+
+      color: $color-neutral-200;
+    }
+
+    &_value {
+      @include text-p3;
+
+      margin-top: 24px;
+      color: $color-neutral-000;
+    }
+  }
+}

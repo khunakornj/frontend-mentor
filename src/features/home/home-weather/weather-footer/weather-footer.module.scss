@@ -1,0 +1,40 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+
+  .heading {
+    @include text-p5;
+
+    color: $color-neutral-000;
+  }
+
+  .card_section {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    column-gap: 16px;
+    padding: 0;
+
+    .card {
+      @include text-p6;
+
+      display: flex;
+      flex-direction: column;
+      row-gap: 14.5px;
+      align-items: center;
+      width: 100%;
+      padding: 16px;
+      color: $color-neutral-000;
+      background-color: $color-neutral-800;
+      border: 1px solid;
+      border-color: $color-neutral-600;
+      border-radius: $radius-12;
+
+      &_value {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
+  }
+}

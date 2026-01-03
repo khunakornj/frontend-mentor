@@ -1,0 +1,24 @@
+.root {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 24px;
+  padding-left: 24px;
+  background-color: white;
+  border-radius: $radius-20;
+
+  .top {
+    @include text-p4;
+
+    position: relative;
+  }
+
+  .bottom {
+    @include text-p6;
+  }
+
+  .right {
+    @include text-p1;
+  }
+}
