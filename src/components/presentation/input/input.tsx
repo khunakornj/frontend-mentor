@@ -1,6 +1,6 @@
 import searchIcon from '@assets/search-icon.svg';
 
-import ImageWrapper from '@/shared/component-utils/image-wrapper/image-wrapper';
+import ImageWrapper from '@/components/util/image-wrapper/image-wrapper';
 
 import style from './input.module.scss';
 

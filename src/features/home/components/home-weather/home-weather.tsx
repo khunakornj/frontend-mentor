@@ -6,9 +6,19 @@ import WeatherMid from './weather-mid/weather-mid';
 function HomeWeather() {
   return (
     <div className={style.root}>
-      <WeatherMain className={style.main} />
-      <WeatherMid className={style.mid} />
-      <WeatherFooter className={style.footer} />
+      <section className={style.main}>
+        <WeatherMain />
+      </section>
+
+      <section className={style.mid}>
+        <WeatherMid />
+      </section>
+
+      <section className={style.footer}>
+        <WeatherFooter />
+      </section>
+
+      <section className={style.side}></section>
     </div>
   );
 }

@@ -1,18 +1,12 @@
-import clsx from 'clsx';
-
 import { useWeatherFooter } from '@/features/home/hooks/use-weather-footer';
 
 import style from './weather-footer.module.scss';
 
-type Props = {
-  className?: string;
-};
-
-function WeatherFooter({ className }: Props) {
+function WeatherFooter() {
   const { data } = useWeatherFooter();
 
   return (
-    <div className={clsx(style.root, className)}>
+    <div className={style.root}>
       <h4 className={style.heading}>Daily Forecast</h4>
       <ul className={style.cardSection}>
         {data.map((v, i) => (

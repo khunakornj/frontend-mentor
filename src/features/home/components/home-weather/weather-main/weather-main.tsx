@@ -1,14 +1,8 @@
-import clsx from 'clsx';
-
 import style from './weather-main.module.scss';
 
-type Props = {
-  className?: string;
-};
-
-function WeatherMain({ className }: Props) {
+function WeatherMain() {
   return (
-    <div className={clsx(style.root, className)}>
+    <div className={style.root}>
       <section>
         <h3 className={style.top}>Berlin, Germany</h3>
         <p className={style.bottom}>Tuesday, Aug 5, 2025</p>

@@ -1,8 +1,8 @@
 import logoUrl from '@assets/logo.svg';
 import logoText from '@assets/logo-text.svg';
 
-import ImageWrapper from '@/shared/component-utils/image-wrapper/image-wrapper';
-import SingleDropdown from '@/shared/components/dropdown/dropdown';
+import SingleDropdown from '@/components/presentation/dropdown/dropdown';
+import ImageWrapper from '@/components/util/image-wrapper/image-wrapper';
 
 import style from './root-layout.module.scss';
 

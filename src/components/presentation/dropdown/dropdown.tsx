@@ -3,7 +3,7 @@ import { normalizeProps, Portal, useMachine } from '@zag-js/react';
 import * as select from '@zag-js/select';
 import { useId } from 'react';
 
-import ImageWrapper from '@/shared/component-utils/image-wrapper/image-wrapper';
+import ImageWrapper from '@/components/util/image-wrapper/image-wrapper';
 
 import style from './dropdown.module.scss';
 
@@ -51,13 +51,13 @@ function SingleDropdown({ className, label, onSelect, ...props }: Props) {
     <div {...api.getRootProps()} className={className} {...props}>
       <div {...api.getControlProps()}>
         <button {...api.getTriggerProps()} className={style.button}>
-          <label {...api.getLabelProps()} className={style.button_label}>
+          <label {...api.getLabelProps()} className={style.buttonLabel}>
             {api.valueAsString || label || 'Select option'}
           </label>
           <ImageWrapper
             src={unitDropdown}
             alt="dropdown-icon"
-            className={style.button_icon}
+            className={style.buttonIcon}
           />
         </button>
       </div>
@@ -69,9 +69,9 @@ function SingleDropdown({ className, label, onSelect, ...props }: Props) {
               <li
                 key={item.value}
                 {...api.getItemProps({ item })}
-                className={style.content_item}
+                className={style.contentItem}
               >
-                <span className={style.content_item_label}>{item.label}</span>
+                <span className={style.contentItemLabel}>{item.label}</span>
               </li>
             ))}
           </ul>

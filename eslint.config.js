@@ -9,6 +9,7 @@ import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import { defineConfig, globalIgnores } from 'eslint/config';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
+import ununsedImport from 'eslint-plugin-unused-imports';
 
 export default defineConfig([
   globalIgnores(['dist', '**/route-tree.gen.ts']),
@@ -17,6 +18,7 @@ export default defineConfig([
     plugins: {
       prettier: prettierPlugin,
       'simple-import-sort': simpleImportSort,
+      'unused-imports': ununsedImport,
     },
     extends: [
       js.configs.recommended,
@@ -33,6 +35,7 @@ export default defineConfig([
       'simple-import-sort/imports': 'error',
       'simple-import-sort/exports': 'error',
       'prettier/prettier': ['error'],
+      'unused-imports/no-unused-imports': 'error',
 
       // --- React Rules ---
       'no-trailing-spaces': 'error',

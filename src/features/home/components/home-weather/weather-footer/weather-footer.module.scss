@@ -11,8 +11,8 @@
 
   .card_section {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    column-gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 16px;
     padding: 0;
 
     .card {
