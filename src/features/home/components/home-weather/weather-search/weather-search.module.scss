@@ -1,0 +1,11 @@
+.root {
+  display: flex;
+  flex-direction: row;
+  column-gap: 16px;
+  justify-content: center;
+
+  .input {
+    width: 100%;
+    max-width: 526px;
+  }
+}

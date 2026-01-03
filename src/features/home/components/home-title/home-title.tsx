@@ -1,8 +1,10 @@
+import style from './home-title.module.scss';
+
 function HomeTitle() {
   return (
-    <div className="">
-      <h1></h1>
-    </div>
+    <>
+      <h1 className={style.text}>How's the sky looking today?</h1>
+    </>
   );
 }
 

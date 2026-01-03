@@ -1,0 +1,6 @@
+.text {
+  @include text-p2;
+
+  width: fit-content;
+  color: $color-neutral-000;
+}

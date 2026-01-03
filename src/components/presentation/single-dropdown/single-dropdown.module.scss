@@ -1,10 +1,13 @@
 $bg-color: $color-neutral-600;
 
 .button {
+  @include text-p7;
+
   display: flex;
   column-gap: 10px;
   align-items: center;
   justify-content: center;
+  width: 100%;
   padding: 8px 16px;
   background-color: $bg-color;
   border-radius: $radius-8;
@@ -27,8 +30,6 @@ $bg-color: $color-neutral-600;
   border-radius: $radius-12;
 
   &_item {
-    @include text-p7;
-
     display: flex;
     justify-content: space-between;
     padding: 10px 8px;

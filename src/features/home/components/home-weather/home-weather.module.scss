@@ -1,11 +1,17 @@
 .root {
   display: grid;
   grid-template:
+    "search search" auto
     "main side" auto
     "mid side" auto
     "footer side" auto
     / minmax(0, 800px) 1fr;
   gap: 32px;
+  width: 100%;
+
+  .search {
+    grid-area: search;
+  }
 
   .main {
     grid-area: main;

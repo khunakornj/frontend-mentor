@@ -1,0 +1,57 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  padding: 24px;
+  background-color: $color-neutral-800;
+  border-radius: $radius-20;
+
+  .heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .headingText {
+      @include text-p5;
+
+      color: $color-neutral-000;
+    }
+  }
+
+  .weather {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    padding: 0;
+
+    .weatherCard {
+      display: flex;
+      column-gap: 8px;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 12px;
+      background-color: $color-neutral-700;
+      border: 1px solid;
+      border-color: $color-neutral-600;
+      border-radius: $radius-8;
+
+      .img {
+        width: 40px;
+        height: 40px;
+      }
+
+      .timeText {
+        @include text-p5-medium;
+
+        margin-right: auto;
+        color: $color-neutral-000;
+      }
+
+      .degreeText {
+        @include text-p7;
+
+        color: $color-neutral-000;
+      }
+    }
+  }
+}

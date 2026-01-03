@@ -31,9 +31,16 @@
       border-radius: $radius-12;
 
       &_value {
+        @include text-p7;
+
         display: flex;
         justify-content: space-between;
         width: 100%;
+      }
+
+      &_img {
+        width: 60px;
+        height: 60px;
       }
     }
   }
