@@ -1,21 +1,28 @@
 import Button from '@/components/presentation/button/button';
-import Input from '@/components/presentation/input/input';
-import { useSearchWeatherForm } from '@/features/home/hooks/use-search-weather-form';
+import InputSearch from '@/components/presentation/input-search/input-search';
+import { useSearchWeather } from '@/features/home/home-weather/weather-search/weather-search.hooks';
 import { handleFormSubmit } from '@/shared/libs/form';
 
 import style from './weather-search.module.scss';
 
 function WeatherSearch() {
-  const form = useSearchWeatherForm();
+  const { form, collection, query } = useSearchWeather();
 
   return (
     <form className={style.root} onSubmit={handleFormSubmit(form)}>
       <form.Field
         name="search"
         children={(field) => (
-          <Input
+          <InputSearch
+            collection={collection}
             className={style.input}
-            onType={(v) => field.handleChange(v)}
+            isLoading={query.isLoading}
+            onInputChange={(v) => {
+              field.handleChange(v);
+            }}
+            onSelect={(v) => {
+              console.log(collection.find(v));
+            }}
           />
         )}
       />
@@ -26,7 +33,10 @@ function WeatherSearch() {
           canSubmit: s.canSubmit,
         })}
         children={({ isDefault, canSubmit }) => (
-          <Button type="submit" disabled={isDefault || !canSubmit} />
+          <Button
+            type="submit"
+            disabled={isDefault || !canSubmit || query.isLoading}
+          />
         )}
       />
     </form>

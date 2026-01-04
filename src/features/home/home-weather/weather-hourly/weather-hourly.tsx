@@ -1,15 +1,15 @@
+import { createListCollection } from '@ark-ui/react/collection';
 import overcast from '@assets/overcast.svg';
 
 import SingleDropdown from '@/components/presentation/single-dropdown/single-dropdown';
 import ImageWrapper from '@/components/util/image-wrapper/image-wrapper';
-import { useWeatherHourly } from '@/features/home/hooks/use-weather-hourly';
-import { collection } from '@/shared/common/func';
 
+import { useWeatherHourly } from './weather-hourly.hooks';
 import style from './weather-hourly.module.scss';
 
 function WeatherHourly() {
   const { data } = useWeatherHourly();
-  const dropdownCollection = collection({
+  const dropdownCollection = createListCollection({
     items: [{ label: 'Monday', value: 'monday' }],
     itemToString: (v) => v.label,
     itemToValue: (v) => v.value,

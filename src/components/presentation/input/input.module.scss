@@ -31,6 +31,14 @@
   &::placeholder {
     color: inherit;
   }
+
+  &:disabled {
+    pointer-events: none;
+  }
+
+  &[data-loading] {
+    @include animate-blink;
+  }
 }
 
 .img {

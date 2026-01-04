@@ -1,5 +1,4 @@
-import { useWeatherMid } from '@/features/home/hooks/use-weather-mid';
-
+import { useWeatherMid } from './weather-mid.hooks';
 import style from './weather-mid.module.scss';
 
 function WeatherMid() {

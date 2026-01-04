@@ -1,9 +1,9 @@
+import { createListCollection } from '@ark-ui/react/collection';
 import logoUrl from '@assets/logo.svg';
 import logoText from '@assets/logo-text.svg';
 
 import SingleDropdown from '@/components/presentation/single-dropdown/single-dropdown';
 import ImageWrapper from '@/components/util/image-wrapper/image-wrapper';
-import { collection } from '@/shared/common/func';
 
 import style from './root-layout.module.scss';
 
@@ -12,7 +12,7 @@ type Props = {
 };
 
 function RootLayout({ children }: Props) {
-  const dropdownCollection = collection({
+  const dropdownCollection = createListCollection({
     items: [{ label: 'Monday', value: { id: 1, sId: '20' } }],
     itemToString: (v) => v.label,
     itemToValue: (v) => v.value.sId,

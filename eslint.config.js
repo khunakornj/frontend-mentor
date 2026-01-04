@@ -42,7 +42,7 @@ export default defineConfig([
       'no-restricted-imports': [
         'error',
         {
-          patterns: ['../*', '../../*'],
+          patterns: ['../../*'],
         },
       ],
       'no-multiple-empty-lines': [

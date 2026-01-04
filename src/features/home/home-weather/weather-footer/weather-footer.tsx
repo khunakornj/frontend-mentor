@@ -1,8 +1,8 @@
 import overcastUrl from '@assets/overcast.svg';
 
 import ImageWrapper from '@/components/util/image-wrapper/image-wrapper';
-import { useWeatherFooter } from '@/features/home/hooks/use-weather-footer';
 
+import { useWeatherFooter } from './weather-footer.hooks';
 import style from './weather-footer.module.scss';
 
 function WeatherFooter() {

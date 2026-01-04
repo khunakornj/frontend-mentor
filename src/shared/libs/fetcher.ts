@@ -35,7 +35,7 @@ export async function fetcher(path: string, method: Method, options: any = {}) {
   // build URL
   const query = params ? qs.stringify(params) : '';
 
-  let url = `${ENV.VITE_API_URL}${path}`;
+  let url = path.includes('http') ? path : `${ENV.VITE_API_URL}${path}`;
   if (version) {
     url += `/${version}`;
   }
@@ -65,4 +65,13 @@ export async function fetcher(path: string, method: Method, options: any = {}) {
   }
 
   return fetch(url, init);
+}
+
+export async function validateAndGetApiData<T>(res: Response) {
+  if (res.status > 299 || res.status < 200) {
+    throw new Error(await res.json());
+  }
+
+  const data: T = await res.json();
+  return data;
 }

@@ -1,4 +1,5 @@
 .root {
+  position: relative;
   padding: 16px 24px;
   color: $color-neutral-000;
   cursor: pointer;
@@ -20,10 +21,24 @@
     opacity: 0.5;
   }
 
+  &[data-loading] .text {
+    color: transparent;
+  }
+
   .text {
     @include text-p5-medium;
 
     cursor: inherit;
     user-select: none;
+  }
+
+  .spinner {
+    @include rotate-animation(0.8s);
+
+    position: absolute;
+    inset: 0;
+    width: 50%;
+    height: 50%;
+    margin: auto;
   }
 }

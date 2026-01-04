@@ -1,0 +1,28 @@
+.root {
+  width: fit-content;
+  height: fit-content;
+}
+
+.itemGroup {
+  padding: 8px;
+  background-color: $color-neutral-800;
+  border: 1px solid;
+  border-color: $color-neutral-700;
+  border-radius: $radius-12;
+
+  .itemWrap {
+    @include text-p7;
+
+    padding: 10px 8px;
+    color: $color-neutral-000;
+    border: 1px solid;
+    border-color: transparent;
+
+    &[data-state="checked"],
+    &[data-highlighted] {
+      background-color: $color-neutral-700;
+      border-color: $color-neutral-600;
+      border-radius: $radius-8;
+    }
+  }
+}
