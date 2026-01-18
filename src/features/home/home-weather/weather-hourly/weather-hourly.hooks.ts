@@ -1,3 +1,5 @@
+import type { DropdownData } from '@/shared/common/types';
+
 type HourlyData = {
   timeText: string;
   value: number;
@@ -39,5 +41,15 @@ export function useWeatherHourly() {
     },
   ];
 
-  return { data };
+  const dropdownData: DropdownData[] = [
+    { label: 'Monday', value: 'monday' },
+    { label: 'Tuesday', value: 'tuesday' },
+    { label: 'Wednesday', value: 'wednesday' },
+    { label: 'Thursday', value: 'thursday' },
+    { label: 'Friday', value: 'friday' },
+    { label: 'Saturday', value: 'saturday' },
+    { label: 'Sunday', value: 'sunday' },
+  ];
+
+  return { data, dropdownData };
 }

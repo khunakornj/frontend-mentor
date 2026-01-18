@@ -5,13 +5,14 @@ import * as select from '@zag-js/select';
 import { useId } from 'react';
 
 import ImageWrapper from '@/components/util/image-wrapper/image-wrapper';
+import type { DropdownData } from '@/shared/common/types';
 
 import style from './single-dropdown.module.scss';
 
 type Props<T> = {
   label?: string;
   className?: string;
-  items: { label: string; value: string }[];
+  items: DropdownData[];
   onSelect?: (v: T) => void;
 };
 

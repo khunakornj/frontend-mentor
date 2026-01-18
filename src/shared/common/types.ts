@@ -10,6 +10,8 @@ export type SortDirection = 'asc' | 'desc' | null;
 export type SetStateFn<T> = Dispatch<SetStateAction<T>>;
 export type State<T> = [T, SetStateFn<T>];
 
+export type DropdownData = { label: string; value: string };
+
 export type UnitType = 'imperial' | 'metric';
 
 export type Temperature = 'celcius' | 'farenheit';
