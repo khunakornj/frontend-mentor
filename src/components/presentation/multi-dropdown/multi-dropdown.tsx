@@ -1,5 +1,5 @@
 import { Portal } from '@ark-ui/react/portal';
-import { createListCollection, Select, useSelect } from '@ark-ui/react/select';
+import { createListCollection, Select } from '@ark-ui/react/select';
 import gearIcon from '@assets/gear.svg';
 import { Fragment } from 'react/jsx-runtime';
 
@@ -11,7 +11,6 @@ export type MultiDropdownItemProps = {
   label: string;
   value: string;
   group: string;
-  defaultChecked?: boolean;
   disabled?: boolean;
 };
 type Props = {
@@ -21,19 +20,18 @@ type Props = {
     onClick?: () => void;
   };
   items: MultiDropdownItemProps[];
+  defaultValue?: string[];
 };
 
-function MultiDropdown({ label, items, itemControl }: Props) {
+function MultiDropdown({ label, items, itemControl, defaultValue }: Props) {
   const collection = createListCollection({
     items,
     groupBy: (item) => item.group,
     isItemDisabled: (item) => item.disabled || false,
   });
 
-  const select = useSelect({ collection: collection, multiple: true });
-
   return (
-    <Select.RootProvider value={select}>
+    <Select.Root collection={collection} multiple={true} value={defaultValue}>
       <Select.Control>
         <Select.Trigger className={style.trigger}>
           <Select.ValueText>{label || 'placeholder'}</Select.ValueText>
@@ -62,7 +60,6 @@ function MultiDropdown({ label, items, itemControl }: Props) {
                       key={item.value}
                       item={item}
                       className={style.item}
-                      defaultChecked={item.defaultChecked}
                     >
                       <Select.ItemText>{item.label}</Select.ItemText>
                       <Select.ItemIndicator>✓</Select.ItemIndicator>
@@ -75,7 +72,7 @@ function MultiDropdown({ label, items, itemControl }: Props) {
         </Select.Positioner>
       </Portal>
       <Select.HiddenSelect />
-    </Select.RootProvider>
+    </Select.Root>
   );
 }
 

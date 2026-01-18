@@ -1,0 +1,23 @@
+meta {
+  name: get-weather
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://api.open-meteo.com/v1/forecast?latitude=13.75398&longitude=100.50144&forecast_hours=8
+  body: none
+  auth: inherit
+}
+
+params:query {
+  latitude: 13.75398
+  longitude: 100.50144
+  forecast_hours: 8
+  ~current_weather: true
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

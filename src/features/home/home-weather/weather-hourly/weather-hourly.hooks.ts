@@ -29,6 +29,14 @@ export function useWeatherHourly() {
       timeText: '8 pm',
       value: 20,
     },
+    {
+      timeText: '9 pm',
+      value: 20,
+    },
+    {
+      timeText: '10 pm',
+      value: 20,
+    },
   ];
 
   return { data };

@@ -6,7 +6,8 @@
   height: 100%;
   padding-right: 24px;
   padding-left: 24px;
-  background-color: white;
+  color: $color-neutral-000;
+  background-image: url('@assets/bg-today-large.svg');
   border-radius: $radius-20;
 
   .top {

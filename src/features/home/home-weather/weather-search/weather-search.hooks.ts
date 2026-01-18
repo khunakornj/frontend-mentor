@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { useDebounce } from 'react-use';
 import { filter, map, pipe, uniqueBy } from 'remeda';
 
-import { HOME_PAGE_QUERY } from '@/features/home/home-page.query';
+import { useHomePageCountryApiOptions } from '@/features/home/home-page.hooks';
 
 export function useSearchWeather() {
   const form = useForm({
@@ -28,14 +28,14 @@ export function useSearchWeather() {
   );
 
   const query = useQuery({
-    ...HOME_PAGE_QUERY.countryDropdown({ name: search }),
+    ...useHomePageCountryApiOptions({ name: search }),
     enabled: !!search,
     select: (val) => {
       return pipe(
         val.results,
         filter((data) => !!data.country),
         map((data) => ({
-          label: `(${data.country}) ${data.name}`,
+          label: `${data.name}, ${data.country}`,
           value: {
             latitude: data.latitude,
             longtitude: data.longitude,

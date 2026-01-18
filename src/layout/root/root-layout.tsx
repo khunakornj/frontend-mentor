@@ -1,10 +1,10 @@
 import logoUrl from '@assets/logo.svg';
 import logoText from '@assets/logo-text.svg';
 
-import SingleDropdown from '@/components/presentation/single-dropdown/single-dropdown';
 import ImageWrapper from '@/components/util/image-wrapper/image-wrapper';
 
 import style from './root-layout.module.scss';
+import UnitDropdown from './unit-dropdown/unit-dropdown';
 
 type Props = {
   children: React.ReactNode;
@@ -15,7 +15,7 @@ function RootLayout({ children }: Props) {
     <div className={style.root}>
       <div className={style.headerTab}>
         <Logo />
-        <SingleDropdown items={[{ label: 'Monday', value: 'monday' }]} />
+        <UnitDropdown />
       </div>
 
       {children}
