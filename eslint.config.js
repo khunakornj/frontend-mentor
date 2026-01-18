@@ -39,6 +39,7 @@ export default defineConfig([
 
       // --- React Rules ---
       'no-trailing-spaces': 'error',
+      'react-hooks/exhaustive-deps': 'off',
       'no-restricted-imports': [
         'error',
         {

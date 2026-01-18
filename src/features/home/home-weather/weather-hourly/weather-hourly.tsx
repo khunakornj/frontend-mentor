@@ -1,4 +1,3 @@
-import { createListCollection } from '@ark-ui/react/collection';
 import overcast from '@assets/overcast.svg';
 
 import SingleDropdown from '@/components/presentation/single-dropdown/single-dropdown';
@@ -9,17 +8,12 @@ import style from './weather-hourly.module.scss';
 
 function WeatherHourly() {
   const { data } = useWeatherHourly();
-  const dropdownCollection = createListCollection({
-    items: [{ label: 'Monday', value: 'monday' }],
-    itemToString: (v) => v.label,
-    itemToValue: (v) => v.value,
-  });
 
   return (
     <div className={style.root}>
       <div className={style.heading}>
         <h2 className={style.headingText}>Hourly forecast</h2>
-        <SingleDropdown collection={dropdownCollection} />
+        <SingleDropdown items={[{ label: 'Monday', value: 'monday' }]} />
       </div>
 
       <ul className={style.weather}>

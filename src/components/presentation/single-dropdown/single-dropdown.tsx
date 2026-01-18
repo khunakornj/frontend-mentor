@@ -1,5 +1,5 @@
+import { createListCollection } from '@ark-ui/react/collection';
 import unitDropdown from '@assets/units-dropdown-icon.svg';
-import type { ListCollection } from '@zag-js/collection';
 import { normalizeProps, Portal, useMachine } from '@zag-js/react';
 import * as select from '@zag-js/select';
 import { useId } from 'react';
@@ -11,22 +11,24 @@ import style from './single-dropdown.module.scss';
 type Props<T> = {
   label?: string;
   className?: string;
-  collection: ListCollection<T>;
+  items: { label: string; value: string }[];
   onSelect?: (v: T) => void;
 };
 
 function SingleDropdown<T>({
   className,
   label,
-  collection,
+  items,
   onSelect,
   ...props
 }: Props<T>) {
+  const collection = createListCollection({
+    items,
+  });
+
   const service = useMachine(select.machine, {
     id: useId(),
-    // library type issue
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    collection: collection as any,
+    collection,
     multiple: false,
     onValueChange(v) {
       onSelect?.(v.items[0] as T);

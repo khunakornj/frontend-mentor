@@ -1,4 +1,3 @@
-import { createListCollection } from '@ark-ui/react/collection';
 import logoUrl from '@assets/logo.svg';
 import logoText from '@assets/logo-text.svg';
 
@@ -12,17 +11,11 @@ type Props = {
 };
 
 function RootLayout({ children }: Props) {
-  const dropdownCollection = createListCollection({
-    items: [{ label: 'Monday', value: { id: 1, sId: '20' } }],
-    itemToString: (v) => v.label,
-    itemToValue: (v) => v.value.sId,
-  });
-
   return (
     <div className={style.root}>
       <div className={style.headerTab}>
         <Logo />
-        <SingleDropdown collection={dropdownCollection} />
+        <SingleDropdown items={[{ label: 'Monday', value: 'monday' }]} />
       </div>
 
       {children}
