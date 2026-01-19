@@ -5,8 +5,6 @@ import { useCurrentWeatherApiOptions } from '@/features/home/hooks/use-weather-a
 import { useUnitStore } from '@/features/home/stores/unit-store';
 
 export function useWeatherMid() {
-  console.log('testest');
-
   const { windSpeed, precipitation } = useUnitStore(
     useShallow((state) => ({
       windSpeed: state.windSpeed,

@@ -1,6 +1,3 @@
-import { useEffect } from 'react';
-import { useStateList } from 'react-use';
-
 import type { MultiDropdownItemProps } from '@/components/presentation/multi-dropdown/multi-dropdown';
 import { useUnitStore } from '@/features/home/stores/unit-store';
 import {
@@ -9,6 +6,7 @@ import {
   UNIT_TYPES,
   WIND_SPEEDS,
 } from '@/shared/common/constant';
+import { useCycle } from '@/shared/hooks/use-cycle';
 
 import {
   getPrecipitationLabel,
@@ -17,7 +15,8 @@ import {
 } from './unit-dropdown.util';
 
 export function useUnitDropdownItems() {
-  const { next, state } = useStateList(UNIT_TYPES.slice());
+  const [state, { next }] = useCycle(UNIT_TYPES);
+
   const store = useUnitStore();
 
   const items: MultiDropdownItemProps[] = [];
@@ -61,11 +60,9 @@ export function useUnitDropdownItems() {
   });
 
   const onClickUnitType = () => {
-    next();
+    const nextState = next();
+    store.setUnit(nextState);
   };
-  useEffect(() => {
-    store.setUnit(state);
-  }, [state]);
 
   return {
     items,
