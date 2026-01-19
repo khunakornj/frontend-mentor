@@ -47,7 +47,11 @@ function InputSearch<T>({
       {...props}
     >
       <Combobox.Control>
-        <Combobox.Input placeholder="Search for a place..." asChild>
+        <Combobox.Input
+          placeholder="Search for a place..."
+          className={style.inputChain}
+          asChild
+        >
           <Input isLoading={isLoading} />
         </Combobox.Input>
       </Combobox.Control>

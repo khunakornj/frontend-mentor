@@ -14,10 +14,10 @@ type Props = {
 
 function Input({ className, onType, isLoading, ...props }: Props) {
   return (
-    <label className={clsx(style.root, className)} aria-disabled>
+    <label className={style.root} aria-disabled>
       <ImageWrapper src={searchIcon} alt="search-icon" className={style.img} />
       <input
-        className={style.input}
+        className={clsx(style.input, className)}
         placeholder="Search for a city"
         data-loading={presentIf(isLoading)}
         onChange={(e) => {
