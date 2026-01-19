@@ -8,12 +8,14 @@ import style from './input-search.module.scss';
 type Props<T> = {
   onInputChange?: (v: string) => void;
   onSelect?: (v: string) => void;
-  onOpenChange?: (open: boolean) => void;
   isLoading?: boolean;
   collection: ListCollection<T>;
   className?: string;
   open?: boolean;
-};
+} & Pick<
+  Combobox.RootProps<T>,
+  'onMouseEnter' | 'onMouseLeave' | 'onBlur' | 'onClick'
+>;
 
 function InputSearch<T>({
   onInputChange,
@@ -21,6 +23,7 @@ function InputSearch<T>({
   collection,
   open,
   isLoading,
+  ...props
 }: Props<T>) {
   const handleInputChange = (details: Combobox.InputValueChangeDetails) => {
     if (details.reason === 'input-change') {
@@ -41,6 +44,7 @@ function InputSearch<T>({
       allowCustomValue
       selectionBehavior="replace"
       className={style.root}
+      {...props}
     >
       <Combobox.Control>
         <Combobox.Input placeholder="Search for a place..." asChild>

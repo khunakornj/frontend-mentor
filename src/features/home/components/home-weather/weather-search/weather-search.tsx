@@ -6,7 +6,8 @@ import { handleFormSubmit } from '@/shared/libs/form';
 import style from './weather-search.module.scss';
 
 function WeatherSearch() {
-  const { form, collection, query, setLocation } = useSearchWeather();
+  const { form, collection, query, setLocation, open, setOpen } =
+    useSearchWeather();
 
   return (
     <form className={style.root} onSubmit={handleFormSubmit(form)}>
@@ -15,6 +16,9 @@ function WeatherSearch() {
         children={(field) => (
           <InputSearch
             collection={collection}
+            open={open}
+            onClick={() => setOpen(true)}
+            onBlur={() => setOpen(false)}
             className={style.input}
             isLoading={query.isLoading}
             onInputChange={(v) => {
@@ -22,6 +26,7 @@ function WeatherSearch() {
             }}
             onSelect={(v) => {
               const { value, label } = collection.find(v)!;
+              setOpen(false);
               setLocation({
                 latitude: value.latitude,
                 longtitude: value.longtitude,

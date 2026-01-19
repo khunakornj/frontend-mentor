@@ -1,7 +1,7 @@
 import { createListCollection } from '@ark-ui/react/collection';
-import { useDebouncedValue, useSetState } from '@mantine/hooks';
-import { useForm, useStore } from '@tanstack/react-form';
+import { useForm } from '@tanstack/react-form';
 import { useQuery } from '@tanstack/react-query';
+import { useState } from 'react';
 import { filter, map, pipe, uniqueBy } from 'remeda';
 
 import { useHomePageCountryApiOptions } from '@/features/home/hooks/use-country-api';
@@ -12,17 +12,16 @@ export function useSearchWeather() {
     defaultValues: {
       search: '',
     },
-    onSubmit: () => {
-      submitLocation();
+    onSubmit: ({ value }) => {
+      setSearch(value.search);
+      setOpen(true);
     },
   });
 
-  const storeSearch = useStore(form.store, (state) => state.values.search);
-  const [debounceSearch] = useDebouncedValue(storeSearch, 500);
-
+  const [search, setSearch] = useState('');
   const query = useQuery({
-    ...useHomePageCountryApiOptions({ name: debounceSearch }),
-    enabled: !!debounceSearch,
+    ...useHomePageCountryApiOptions({ name: search }),
+    enabled: !!search,
     select: (val) => {
       return pipe(
         val.results,
@@ -45,14 +44,9 @@ export function useSearchWeather() {
     itemToValue: (v) => `${v.value.latitude}${v.value.longtitude}`,
   });
 
-  const [location, setLocation] = useSetState(
-    useLocationStore.getInitialState(),
-  );
+  const setLocation = useLocationStore((state) => state.setLocation);
 
-  const submitLocationState = useLocationStore((state) => state.setLocation);
-  const submitLocation = () => {
-    submitLocationState(location);
-  };
+  const [open, setOpen] = useState(false);
 
-  return { form, query, collection, setLocation, submitLocation };
+  return { form, query, collection, setLocation, open, setOpen };
 }
