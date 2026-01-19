@@ -1,30 +1,29 @@
-import overcast from '@assets/overcast.svg';
+import { Suspense } from 'react';
 
 import SingleDropdown from '@/components/presentation/single-dropdown/single-dropdown';
-import ImageWrapper from '@/components/util/image-wrapper/image-wrapper';
 
-import { useWeatherHourly } from './weather-hourly.hooks';
+import { useWeatherHourlyDropdown } from './weather-hourly.hooks';
 import style from './weather-hourly.module.scss';
+import WeatherHourlyItems from './weather-hourly-items/weather-hourly-items';
+import WeatherHourlyItemsLoading from './weather-hourly-items/weather-hourly-items.loading';
 
 function WeatherHourly() {
-  const { data, dropdownData } = useWeatherHourly();
+  const [selectDay, handlers] = useWeatherHourlyDropdown();
 
   return (
     <div className={style.root}>
       <div className={style.heading}>
         <h2 className={style.headingText}>Hourly forecast</h2>
-        <SingleDropdown items={dropdownData} />
+        <SingleDropdown
+          items={handlers.dropdownData}
+          onSelect={handlers.onSelect}
+          defaultValue={selectDay}
+        />
       </div>
 
-      <ul className={style.weather}>
-        {data.map((v, i) => (
-          <li className={style.weatherCard} key={i}>
-            <ImageWrapper className={style.img} src={overcast} alt="cloud" />
-            <h4 className={style.timeText}>{v.timeText}</h4>
-            <span className={style.degreeText}>{v.value}°</span>
-          </li>
-        ))}
-      </ul>
+      <Suspense fallback={<WeatherHourlyItemsLoading />}>
+        <WeatherHourlyItems selectDay={selectDay} />
+      </Suspense>
     </div>
   );
 }

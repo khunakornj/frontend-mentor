@@ -1,3 +1,4 @@
+import type { Dayjs } from 'dayjs';
 import type { Dispatch, SetStateAction } from 'react';
 import type { TupleOf, UnionToTuple } from 'type-fest';
 
@@ -13,6 +14,8 @@ export type State<T> = [T, SetStateFn<T>];
 export type DropdownData = { label: string; value: string };
 
 export type UnitType = 'imperial' | 'metric';
+
+export type MyDayJs = Dayjs;
 
 export type Temperature = 'celsius' | 'fahrenheit';
 export type WindSpeed = 'kmh' | 'mph';

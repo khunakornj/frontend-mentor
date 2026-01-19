@@ -1,55 +1,36 @@
-import type { DropdownData } from '@/shared/common/types';
+import { useState } from 'react';
+import * as R from 'remeda';
 
-type HourlyData = {
-  timeText: string;
-  value: number;
+import type { DropdownData, MyDayJs } from '@/shared/common/types';
+import myDayJs from '@/shared/libs/dayjs';
+
+export type HourlyData = {
+  time: MyDayJs;
+  temperature: number;
+  weatherCode: number;
 };
 
-export function useWeatherHourly() {
-  const data: HourlyData[] = [
-    {
-      timeText: '3 pm',
-      value: 20,
-    },
-    {
-      timeText: '4 pm',
-      value: 30,
-    },
-    {
-      timeText: '5 pm',
-      value: 11,
-    },
-    {
-      timeText: '6 pm',
-      value: 90,
-    },
-    {
-      timeText: '7 pm',
-      value: 18,
-    },
-    {
-      timeText: '8 pm',
-      value: 20,
-    },
-    {
-      timeText: '9 pm',
-      value: 20,
-    },
-    {
-      timeText: '10 pm',
-      value: 20,
-    },
-  ];
+export function useWeatherHourlyDropdown() {
+  // start week is sunday, we want to start monday
+  const startWeek = myDayJs().startOf('weeks').add(1, 'days');
 
-  const dropdownData: DropdownData[] = [
-    { label: 'Monday', value: 'monday' },
-    { label: 'Tuesday', value: 'tuesday' },
-    { label: 'Wednesday', value: 'wednesday' },
-    { label: 'Thursday', value: 'thursday' },
-    { label: 'Friday', value: 'friday' },
-    { label: 'Saturday', value: 'saturday' },
-    { label: 'Sunday', value: 'sunday' },
-  ];
+  const dropdownData: DropdownData[] = R.pipe(
+    R.range(0, 8),
+    R.map((offset) => startWeek.add(offset, 'days')),
+    R.map((day) => ({
+      label: day.tz().format('dddd'),
+      value: day.format('YYYY-MM-DD'),
+    })),
+  );
 
-  return { data, dropdownData };
+  // default today
+  const [selectDay, onSelect] = useState(myDayJs().format('YYYY-MM-DD'));
+
+  return [
+    selectDay,
+    {
+      dropdownData,
+      onSelect,
+    },
+  ] as const;
 }

@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: https://api.open-meteo.com/v1/forecast?latitude=13.75398&longitude=100.50144&forecast_hours=8
+  url: https://api.open-meteo.com/v1/forecast?latitude=13.75398&longitude=100.50144&forecast_hours=8&hourly=temperature_2m,relative_humidity_2m,windspeed_10m,weathercode&start_date=2026-01-19&end_date=2026-01-20
   body: none
   auth: inherit
 }
@@ -14,7 +14,14 @@ params:query {
   latitude: 13.75398
   longitude: 100.50144
   forecast_hours: 8
+  hourly: temperature_2m,relative_humidity_2m,windspeed_10m,weathercode
+  start_date: 2026-01-19
+  end_date: 2026-01-20
   ~current_weather: true
+  ~daily: temperature_2m_max,temperature_2m_min,precipitation_sum,weathercode,relative_humidity_2m_mean,wind_speed_10m_max
+  ~forecast_days: 7
+  ~temperature_unit: fahrenheit
+  ~current: temperature_2m,relative_humidity_2m,precipitation,wind_speed_10m,weathercode
 }
 
 settings {

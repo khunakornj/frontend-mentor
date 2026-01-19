@@ -7,20 +7,22 @@ import type { DropdownData } from '@/shared/common/types';
 
 import style from './single-dropdown.module.scss';
 
-type Props<T> = {
+type Props = {
   label?: string;
   className?: string;
   items: DropdownData[];
-  onSelect?: (v: T) => void;
+  defaultValue?: string;
+  onSelect?: (v: string) => void;
 };
 
-function SingleDropdown<T>({
+function SingleDropdown({
   className,
   label,
   items,
   onSelect,
+  defaultValue,
   ...props
-}: Props<T>) {
+}: Props) {
   const collection = createListCollection({
     items,
   });
@@ -29,8 +31,9 @@ function SingleDropdown<T>({
     <Select.Root
       collection={collection}
       onValueChange={(v) => {
-        onSelect?.(v.items[0] as T);
+        onSelect?.(v.value[0]);
       }}
+      value={defaultValue ? [defaultValue] : undefined}
       className={className}
       {...props}
     >

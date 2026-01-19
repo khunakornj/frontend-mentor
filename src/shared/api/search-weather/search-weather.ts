@@ -4,6 +4,7 @@ import {
 } from '@tanstack/react-query';
 import { match } from 'ts-pattern';
 
+import myDayJs from '@/shared/libs/dayjs';
 import { fetcher, validateAndGetApiData } from '@/shared/libs/fetcher';
 
 import type {
@@ -62,7 +63,19 @@ export function getSearchWeatherQueryOptions(
         .with('hourly-forecast', () => {
           params.hourly =
             'temperature_2m,relative_humidity_2m,windspeed_10m,weathercode';
-          params.forecast_hours = 8;
+
+          let startHour = myDayJs().startOf('hours');
+          if (opts.params.focusDate) {
+            startHour = startHour.set(
+              'days',
+              myDayJs(opts.params.focusDate).get('days'),
+            );
+          }
+
+          params.start_hour = startHour.format('YYYY-MM-DDTHH:mm');
+          params.end_hour = startHour
+            .add(7, 'hours')
+            .format('YYYY-MM-DDTHH:mm');
         });
 
       const res = await fetcher(url, 'GET', { params });

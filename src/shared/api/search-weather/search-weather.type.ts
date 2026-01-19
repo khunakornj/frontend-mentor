@@ -1,4 +1,5 @@
 import type {
+  MyDayJs,
   Precipitation,
   Temperature,
   WindSpeed,
@@ -17,6 +18,7 @@ export type Query = {
     temperature?: Temperature;
     precipitation?: Precipitation;
     currentWeather?: boolean;
+    focusDate?: MyDayJs | string;
   };
 };
 
@@ -31,6 +33,10 @@ export type ApiParams = {
   hourly?: string;
   forecast_hours?: number;
   forecast_days?: number;
+  start_hour?: string;
+  end_hour?: string;
+  start_date?: string;
+  end_date?: string;
 };
 
 export type ApiResponseBase = {
@@ -71,7 +77,7 @@ export type ApiResponseHourlyForecast = ApiResponseBase & {
     relative_humidity_2m: number[];
     windspeed_10m: number[];
     weathercode: number[];
-  }[];
+  };
 };
 
 export type ApiResponseDailyForecast = ApiResponseBase & {
