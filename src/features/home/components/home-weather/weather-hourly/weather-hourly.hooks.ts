@@ -15,7 +15,7 @@ export function useWeatherHourlyDropdown() {
   const startWeek = myDayJs().startOf('weeks').add(1, 'days');
 
   const dropdownData: DropdownData[] = R.pipe(
-    R.range(0, 8),
+    R.range(0, 7),
     R.map((offset) => startWeek.add(offset, 'days')),
     R.map((day) => ({
       label: day.tz().format('dddd'),
