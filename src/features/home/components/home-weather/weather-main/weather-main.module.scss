@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: space-between;
   height: 100%;
-  padding-right: 24px;
+  padding-right: 34px;
   padding-left: 24px;
   color: $color-neutral-000;
   background-image: url('@assets/bg-today-large.svg');
@@ -20,7 +20,21 @@
     @include text-p6;
   }
 
-  .right {
-    @include text-p1;
+  .rightSection {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+
+    .right {
+      @include text-p1;
+    }
+
+    .img {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 5px;
+    }
+
   }
+
 }
