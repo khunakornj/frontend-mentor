@@ -23,7 +23,7 @@
       row-gap: 14.5px;
       align-items: center;
       width: 100%;
-      padding: 16px;
+      padding: 16px 10px;
       color: $color-neutral-000;
       background-color: $color-neutral-800;
       border: 1px solid;
@@ -44,4 +44,19 @@
       }
     }
   }
+}
+
+.spinnerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+}
+
+.spinner {
+  @include rotate-animation(0.8s);
+
+  width: 30px;
+  height: 30px;
 }

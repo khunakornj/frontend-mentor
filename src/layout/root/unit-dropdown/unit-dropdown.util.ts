@@ -9,8 +9,8 @@ import type {
 
 export function getTemperatureLabel(temperature: Temperature) {
   return match(temperature)
-    .with('celcius', () => 'Celsius (°C)')
-    .with('farenheit', () => 'Fahrenheit (°F)')
+    .with('celsius', () => 'Celsius (°C)')
+    .with('fahrenheit', () => 'Fahrenheit (°F)')
     .exhaustive();
 }
 

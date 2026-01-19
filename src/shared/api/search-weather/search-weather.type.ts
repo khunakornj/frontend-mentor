@@ -23,7 +23,7 @@ export type Query = {
 export type ApiParams = {
   latitude: number;
   longitude: number;
-  current_weather?: boolean;
+  current?: string;
   temperature_unit?: string;
   wind_speed_unit?: string;
   precipitation_unit?: string;
@@ -53,13 +53,13 @@ export type ApiResponseCurrent = ApiResponseBase & {
     is_day: string;
     weathercode: string;
   };
-  current_weather: {
+  current: {
     time: string;
     interval: number;
-    temperature: number;
-    windspeed: number;
-    winddirection: number;
-    is_day: number;
+    temperature_2m: number;
+    wind_speed_10m: number;
+    relative_humidity_2m: number;
+    precipitation: number;
     weathercode: number;
   };
 };
@@ -78,6 +78,7 @@ export type ApiResponseDailyForecast = ApiResponseBase & {
   daily: {
     time: string[];
     temperature_2m_max: number[];
+    temperature_2m_min: number[];
     precipitation_sum: number[];
     weathercode: number[];
     relative_humidity_2m_mean: number[];

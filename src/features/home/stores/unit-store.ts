@@ -6,7 +6,7 @@ import type {
   Temperature,
   UnitType,
   WindSpeed,
-} from '../common/types';
+} from '@/shared/common/types';
 
 type Store = {
   temperature: Temperature;
@@ -19,7 +19,7 @@ type StoreActions = {
 };
 
 export const useUnitStore = create<Store & StoreActions>()((set) => ({
-  temperature: 'celcius',
+  temperature: 'celsius',
   windSpeed: 'kmh',
   precipitation: 'mm',
 
@@ -28,12 +28,12 @@ export const useUnitStore = create<Store & StoreActions>()((set) => ({
       match(unitType)
         .returnType<Store>()
         .with('metric', () => ({
-          temperature: 'celcius',
+          temperature: 'celsius',
           windSpeed: 'kmh',
           precipitation: 'mm',
         }))
         .with('imperial', () => ({
-          temperature: 'farenheit',
+          temperature: 'fahrenheit',
           windSpeed: 'mph',
           precipitation: 'inch',
         }))

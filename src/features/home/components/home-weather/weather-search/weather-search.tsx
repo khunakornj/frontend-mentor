@@ -1,12 +1,12 @@
 import Button from '@/components/presentation/button/button';
 import InputSearch from '@/components/presentation/input-search/input-search';
-import { useSearchWeather } from '@/features/home/home-weather/weather-search/weather-search.hooks';
+import { useSearchWeather } from '@/features/home/components/home-weather/weather-search/weather-search.hooks';
 import { handleFormSubmit } from '@/shared/libs/form';
 
 import style from './weather-search.module.scss';
 
 function WeatherSearch() {
-  const { form, collection, query } = useSearchWeather();
+  const { form, collection, query, setLocation } = useSearchWeather();
 
   return (
     <form className={style.root} onSubmit={handleFormSubmit(form)}>
@@ -21,7 +21,12 @@ function WeatherSearch() {
               field.handleChange(v);
             }}
             onSelect={(v) => {
-              console.log(collection.find(v));
+              const { value, label } = collection.find(v)!;
+              setLocation({
+                latitude: value.latitude,
+                longtitude: value.longtitude,
+                country: label,
+              });
             }}
           />
         )}

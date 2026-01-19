@@ -1,7 +1,11 @@
+import { Suspense } from 'react';
+
 import style from './home-weather.module.scss';
 import WeatherFooter from './weather-footer/weather-footer';
+import WeatherFooterLoading from './weather-footer/weather-footer.loading';
 import WeatherHourly from './weather-hourly/weather-hourly';
 import WeatherMain from './weather-main/weather-main';
+import WeatherMainLoad from './weather-main/weather-main.loading';
 import WeatherMid from './weather-mid/weather-mid';
 import WeatherSearch from './weather-search/weather-search';
 
@@ -13,7 +17,9 @@ function HomeWeather() {
       </section>
 
       <section className={style.main}>
-        <WeatherMain />
+        <Suspense fallback={<WeatherMainLoad />}>
+          <WeatherMain />
+        </Suspense>
       </section>
 
       <section className={style.mid}>
@@ -21,7 +27,9 @@ function HomeWeather() {
       </section>
 
       <section className={style.footer}>
-        <WeatherFooter />
+        <Suspense fallback={<WeatherFooterLoading />}>
+          <WeatherFooter />
+        </Suspense>
       </section>
 
       <section className={style.side}>

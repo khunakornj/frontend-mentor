@@ -5,7 +5,8 @@ import { useState } from 'react';
 import { useDebounce } from 'react-use';
 import { filter, map, pipe, uniqueBy } from 'remeda';
 
-import { useHomePageCountryApiOptions } from '@/features/home/home-page.hooks';
+import { useHomePageCountryApiOptions } from '@/features/home/hooks/use-country-api';
+import { useLocationStore } from '@/features/home/stores/location-store';
 
 export function useSearchWeather() {
   const form = useForm({
@@ -52,5 +53,7 @@ export function useSearchWeather() {
     itemToValue: (v) => `${v.value.latitude}${v.value.longtitude}`,
   });
 
-  return { form, query, collection };
+  const setLocation = useLocationStore((state) => state.setLocation);
+
+  return { form, query, collection, setLocation };
 }

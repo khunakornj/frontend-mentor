@@ -2,13 +2,13 @@ import { useEffect } from 'react';
 import { useStateList } from 'react-use';
 
 import type { MultiDropdownItemProps } from '@/components/presentation/multi-dropdown/multi-dropdown';
+import { useUnitStore } from '@/features/home/stores/unit-store';
 import {
   PRECIPITATION,
   TEMPERATURES,
   UNIT_TYPES,
   WIND_SPEEDS,
 } from '@/shared/common/constant';
-import { useUnitStore } from '@/shared/store/unit-store';
 
 import {
   getPrecipitationLabel,

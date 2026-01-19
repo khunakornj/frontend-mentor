@@ -14,7 +14,7 @@ export type DropdownData = { label: string; value: string };
 
 export type UnitType = 'imperial' | 'metric';
 
-export type Temperature = 'celcius' | 'farenheit';
+export type Temperature = 'celsius' | 'fahrenheit';
 export type WindSpeed = 'kmh' | 'mph';
 export type Precipitation = 'mm' | 'inch';
 export type WeatherType =
